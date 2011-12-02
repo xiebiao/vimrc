@@ -1,5 +1,5 @@
 $ sudo apt-get install ctags
-$ git clone https://bitbucket.org/xiaog/vimer
+$ git clone https://github.com/xiaog/vimer
 $ cd vimer
 $ ./install_vimrc.sh
 $ ./install_plugin.sh
