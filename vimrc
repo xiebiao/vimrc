@@ -34,7 +34,6 @@ set incsearch
 set gdefault   "行内替换
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set langmenu=zh_CN.UTF-8   "语言设置
-set fileformat=unix "默认使用unix格式
 set helplang=cn
 set enc=utf-8   "编码设置
 set fileencodings=utf-8,gbk,ucs-bom,cp936   "设置文件编码
