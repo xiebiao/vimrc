@@ -5,7 +5,7 @@
 #--------------
 
 #
-#	install vim plugins
+#   NOTE:Make sure you have installed git and ctags
 #
 
 _CURRENT_PATH=`pwd`
