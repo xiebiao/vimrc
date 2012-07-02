@@ -79,7 +79,8 @@ autocmd FileType java set omnifunc=javacomplete#Complete
 "	Colors
 "===================
 "colorscheme murphy 
-colorscheme my_desert
+"colorscheme my_desert
+colorscheme devbox-dark-256 
 "colorscheme darkblue
 "colorscheme darkburn
 "colorscheme lucius
@@ -90,7 +91,6 @@ colorscheme my_desert
 "===================
 "	Key map
 "===================
-map <F2> :NERDTree %<cr>
 " 手动刷新文件
 map <F5> :e!<cr>    
 map <F12> :TlistToggle<cr>
