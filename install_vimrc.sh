@@ -25,4 +25,4 @@ fi
 cp $_SHELL_PATH/vimrc $_USER_HOME"/"$_VIMRC
 echo "Copy $_SHELL_PATH/vimrc to "$_USER_HOME/$_VIMRC
 
-cp colors/my_desert.vim  $_VIM_COLORS 
+cp colors/* $_VIM_COLORS 
