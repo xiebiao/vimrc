@@ -91,6 +91,7 @@ colorscheme devbox-dark-256
 "===================
 "	Key map
 "===================
+map <F4> :NERDTree<cr>
 " 手动刷新文件
 map <F5> :e!<cr>    
 map <F12> :TlistToggle<cr>
