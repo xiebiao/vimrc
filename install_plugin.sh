@@ -44,12 +44,16 @@ init()
 #	taglist.vim
 taglist()
 {
+    if [ ! -f "/usr/bin/ctags" ];then
+        echo "WARN: You must install ctags"
+        exit 0
+    fi
     _TAGLIST="taglist"
     echo "INSTALL $_TAGLIST start ..."
     _TAGLIST_FILE="taglist.zip"
 
     if [ ! -d "$_TEMP_DIR/$_TAGLIST" ]; then
-        echo "mkdir $_TAGLIST ..."
+        echo "  mkdir $_TAGLIST ..."
         mkdir "$_TEMP_DIR/$_TAGLIST"
     fi
         wget -q -nd -O $_TEMP_DIR/$_TAGLIST/$_TAGLIST_FILE \
@@ -59,7 +63,7 @@ taglist()
     if [ ! -d "$_TAGLIST" ]; then
         mkdir "$_TAGLIST"
     fi
-    echo "unzip $_TAGLIST_FILE ..."
+    echo "  unzip $_TAGLIST_FILE ..."
     unzip -o $_TEMP_DIR/$_TAGLIST/$_TAGLIST_FILE -d $_TEMP_DIR/$_TAGLIST > /dev/null
     cp -rf $_TEMP_DIR/$_TAGLIST/plugin/* $_VIM_PLUGIN
     cp -rf $_TEMP_DIR/$_TAGLIST/doc/* $_VIM_DOC
@@ -69,6 +73,10 @@ taglist()
 #	INSTALL NERDTree
 nerdtree()
 {
+    if [ ! -f "/usr/bin/git" ];then
+        echo "WARN: You must install git"
+        exit 0
+    fi
     _NERDTREE="nerdtree"
     echo "INSTALL $_NERDTREE start ..."
     if [ ! -d "$_TEMP_DIR/$_NERDTREE" ]; then
@@ -100,7 +108,7 @@ c()
     fi
     wget -q -nd -O $_TEMP_DIR/$_C_ZIP \
     http://www.vim.org/scripts/download_script.php?src_id=17992
-    echo "unzip $_C ..."
+    echo "  unzip $_C ..."
     unzip -o $_TEMP_DIR/$_C_ZIP -d $_TEMP_DIR/$_C_FILE -x *Templates *.template > /dev/null
     cp -rf $_TEMP_DIR/$_C_FILE/* $_VIM_HOME/
     echo "INSTALL $_C success ..."
@@ -113,10 +121,10 @@ clean()
 
 main()
 {
-   clean;
-   init;
-   a;
-   c;
+    clean;
+    init;
+    a;
+    c;
    nerdtree;
    taglist;
 }
