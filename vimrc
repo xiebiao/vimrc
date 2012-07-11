@@ -95,7 +95,8 @@ map <F4> :NERDTree<cr>
 " 手动刷新文件
 map <F5> :e!<cr>    
 map <F12> :TlistToggle<cr>
-
+"在正常模式下光标在窗口中移动
+nmap <S-l> :wincmd w<cr>
 
 "===================
 "   Taglist
