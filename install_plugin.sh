@@ -16,6 +16,8 @@ _VIM_PLUGIN=""
 _VIM_DOC=""
 _VIM_FTPLUGIN=""
 
+_DEBUG=$*
+
 init()
 {
     if [ "$_USER" = "root" ];then
@@ -50,6 +52,7 @@ taglist()
     fi
     _TAGLIST="taglist"
     echo "INSTALL $_TAGLIST start ..."
+    echo ""
     _TAGLIST_FILE="taglist.zip"
 
     if [ ! -d "$_TEMP_DIR/$_TAGLIST" ]; then
@@ -67,6 +70,7 @@ taglist()
     unzip -o $_TEMP_DIR/$_TAGLIST/$_TAGLIST_FILE -d $_TEMP_DIR/$_TAGLIST > /dev/null
     cp -rf $_TEMP_DIR/$_TAGLIST/plugin/* $_VIM_PLUGIN
     cp -rf $_TEMP_DIR/$_TAGLIST/doc/* $_VIM_DOC
+    echo ""
     echo "INSTALL $_TAGLIST success ..."
 }
 
@@ -79,20 +83,24 @@ nerdtree()
     fi
     _NERDTREE="nerdtree"
     echo "INSTALL $_NERDTREE start ..."
+    echo ""
     if [ ! -d "$_TEMP_DIR/$_NERDTREE" ]; then
         mkdir $_TEMP_DIR/$_NERDTREE
         git clone https://github.com/scrooloose/nerdtree.git $_TEMP_DIR/$_NERDTREE
     fi
     cp -rf $_TEMP_DIR/$_NERDTREE/plugin $_VIM_HOME
     cp -rf $_TEMP_DIR/$_NERDTREE/doc $_VIM_HOME
+    echo ""
     echo "INSTALL $_NERDTREE success ..."
 }
 #	INSTALL a.vim
 a(){
     _A="a.vim"
     echo "INSTALL $_A start ..."
+    echo ""
     wget -q -nd -O $_VIM_PLUGIN/$_A \
     http://www.vim.org/scripts/download_script.php?src_id=7218
+    echo ""
     echo "INSTALL $_A success ..."
 }
 
@@ -103,6 +111,7 @@ c()
     _C_FILE="cvim"
     _C_ZIP="cvim.zip"
     echo "INSTALL $_C start ..."
+    echo ""
     if [ ! -d "$_TEMP_DIR/$_C_FILE" ]; then
         mkdir "$_TEMP_DIR/$_C_FILE" 
     fi
@@ -111,6 +120,7 @@ c()
     echo "  unzip $_C ..."
     unzip -o $_TEMP_DIR/$_C_ZIP -d $_TEMP_DIR/$_C_FILE -x *Templates *.template > /dev/null
     cp -rf $_TEMP_DIR/$_C_FILE/* $_VIM_HOME/
+    echo ""
     echo "INSTALL $_C success ..."
 }
 
@@ -125,8 +135,8 @@ main()
     init;
     a;
     c;
-   nerdtree;
-   taglist;
+    nerdtree;
+    taglist;
 }
 
 main
