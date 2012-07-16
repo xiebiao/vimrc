@@ -35,8 +35,10 @@ set gdefault   "行内替换
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set langmenu=zh_CN.UTF-8   "语言设置
 set helplang=cn
+set fileencodings=utf-8,gbk,ucs-bom,cp936,unicode,latin-1   "设置文件编码列表
 set enc=utf-8   "编码设置
-set fileencodings=utf-8,gbk,ucs-bom,cp936   "设置文件编码
+set fileencoding=utf-8
+set encoding=utf-8
 " 我的状态行显示的内容（包括文件类型和解码）
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 "set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
@@ -95,7 +97,7 @@ map <F4> :NERDTree<cr>
 " 手动刷新文件
 map <F5> :e!<cr>    
 map <F12> :TlistToggle<cr>
-"在正常模式下光标在窗口中移动
+"在正常模式下光标在窗口中移动快捷键
 nmap <S-l> :wincmd w<cr>
 
 "===================
