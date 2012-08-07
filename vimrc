@@ -1,6 +1,9 @@
 "===================
 "	Public
 "===================
+if has('mouse') 
+   set mouse=a 
+endif 
 set cursorcolumn                 "光标所在列高亮(vim6.0以上)
 set cursorline                   "光标所在行高亮(vim6.0以上)
 set textwidth=80                 "设置70个字符就自动换行
