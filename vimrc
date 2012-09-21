@@ -102,7 +102,11 @@ map <F5> :e!<cr>
 map <F12> :TlistToggle<cr>
 "在正常模式下光标在窗口中移动快捷键
 nmap <S-l> :wincmd w<cr>
-
+" 设置 Ctrl + s 保存当前文件
+" 由于Ctrl+S被其他使用，首先要修改~/.bashrc文件，在最后加上
+" stty stop ''
+map <silent><C-s> :update<CR>
+inoremap <C-s> <ESC>:update<CR>a
 "===================
 "   Taglist
 "===================
