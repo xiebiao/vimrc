@@ -60,7 +60,7 @@ taglist()
     fi
     _TAGLIST="taglist"
     echo "INSTALL $_TAGLIST start ..."
-    echo ""
+    echo "..."
     _TAGLIST_FILE="taglist.zip"
 
     if [ ! -d "$_TEMP_DIR/$_TAGLIST" ]; then
@@ -71,8 +71,8 @@ taglist()
     fi
     cp -rf $_TEMP_DIR/$_TAGLIST/plugin $_VIM_HOME 
     cp -rf $_TEMP_DIR/$_TAGLIST/doc $_VIM_HOME
-    echo ""
     echo "INSTALL $_TAGLIST success ..."
+    echo "..."
 }
 #   INSTALL https://github.com/godlygeek/tabular.git
 tabular()
@@ -80,14 +80,15 @@ tabular()
 
     _TABULAR="tabular"
     echo "INSTALL $_TABULAR start ..."
+    echo "..."
     if [ ! -d "$_TEMP_DIR/$_TABULAR" ]; then
         mkdir $_TEMP_DIR/$_TABULAR
         git clone https://github.com/godlygeek/tabular.git $_TEMP_DIR/$_TABULAR 
     fi
     cp -rf $_TEMP_DIR/$_TABULAR/plugin $_VIM_HOME 
     cp -rf $_TEMP_DIR/$_TABULAR/doc $_VIM_HOME
-    echo "" 
     echo "INSTALL $_TABULAR success ..."
+    echo "..."
 
 }
 # NERDTree
@@ -95,15 +96,15 @@ nerdtree()
 {
     _NERDTREE="nerdtree"
     echo "INSTALL $_NERDTREE start ..."
-    echo ""
+    echo "..."
     if [ ! -d "$_TEMP_DIR/$_NERDTREE" ]; then
         mkdir $_TEMP_DIR/$_NERDTREE
         git clone https://github.com/scrooloose/nerdtree.git $_TEMP_DIR/$_NERDTREE
     fi
     cp -rf $_TEMP_DIR/$_NERDTREE/plugin $_VIM_HOME
     cp -rf $_TEMP_DIR/$_NERDTREE/doc $_VIM_HOME
-    echo ""
     echo "INSTALL $_NERDTREE success ..."
+    echo "..." 
 }
 # a.vim
 # A few of quick commands to swtich between source files and header files
@@ -111,11 +112,11 @@ nerdtree()
 a(){
     _A="a.vim"
     echo "INSTALL $_A start ..."
-    echo ""
+    echo "..."
     wget -q -nd -O $_VIM_PLUGIN/$_A \
     http://www.vim.org/scripts/download_script.php?src_id=7218
-    echo ""
     echo "INSTALL $_A success ..."
+    echo "..."
 }
 
 # c.vim
@@ -127,15 +128,15 @@ a(){
 c()
 {
     _C_FILE="cvim"
-    echo "INSTALL $_C start ..."
-    echo ""
+    echo "INSTALL $_C_FILE start ..."
+    echo "..."
     if [ ! -d "$_TEMP_DIR/$_C_FILE" ]; then
         mkdir "$_TEMP_DIR/$_C_FILE" 
         git clone https://github.com/vim-scripts/c.vim.git $_TEMP_DIR/$_C_FILE
     fi
     cp -rf $_TEMP_DIR/$_C_FILE/* $_VIM_HOME/
-    echo ""
-    echo "INSTALL $_C success ..."
+    echo "INSTALL $_C_FILE success ..."
+    echo "..."
 }
 
 main()
