@@ -63,7 +63,7 @@ set fillchars=vert:\ ,stl:\ ,stlnc:\   "在被分割的窗口间显示空白，�
 set showmatch   "高亮显示匹配的括号
 set matchtime=5   "匹配括号高亮的时间（单位是十分之一秒）
 set scrolloff=3   "光标移动到buffer的顶部和底部时保持3行距离
-
+"set path +=/usr/include "C语言头文件查找位置
 "========================
 "	File types
 "========================
@@ -71,7 +71,8 @@ filetype on    "侦测文件类型
 filetype plugin on    "载入文件类型插件
 filetype indent on    "为特定文件类型载入相关缩进文件
 "setlocal omnifunc=javacomplete#Complete 
-autocmd FileType python set omnifunc=pythoncomplete#Complete
+" python不要 tab 
+autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -121,8 +122,3 @@ let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_Show_One_File = 1            "不同时显示多个文件的tag，只显示当前文件的
 let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
 let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
-"===================
-"	Python
-"===================
-" 不要 tab 
-autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
