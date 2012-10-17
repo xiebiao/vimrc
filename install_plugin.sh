@@ -14,6 +14,7 @@ _USER=`whoami`
 _VIM_HOME=""
 _VIMRC=""
 _VIM_PLUGIN=""
+_VIM_SYNTAX=""
 _VIM_DOC=""
 _VIM_FTPLUGIN=""
 
@@ -35,6 +36,7 @@ init()
     _VIM_PLUGIN=$_VIM_HOME"/plugin"
     _VIM_DOC=$_VIM_HOME"/doc"
     _VIM_FTPLUGIN=$_VIM_HOME"/ftplugin"
+    _VIM_SYNTAX=$_VIM_HOME"/syntax"
 
     if [ ! -d "$_VIM_PLUGIN" ]; then
         echo "mkdir $_VIM_PLUGIN ..."
@@ -138,14 +140,23 @@ c()
     echo "INSTALL $_C_FILE success ..."
     echo "..."
 }
-
+vala()
+{
+    wget -O $_TEMP_DIR/vala.vim \
+    "https://live.gnome.org/Vala/Vim?action=AttachFile&do=get&target=vala.vim"
+    if [ ! -d "$_VIM_SYNTAX" ]; then
+        echo "mkdir $_VIM_SYNTAX ..."
+        mkdir $_VIM_SYNTAX
+    fi
+    cp $_TEMP_DIR/vala.vim $_VIM_SYNTAX/
+}
 main()
 {
     init;
-    #a;
     c;
     nerdtree;
     taglist;
+    vala;
     #tabular;
 }
 
