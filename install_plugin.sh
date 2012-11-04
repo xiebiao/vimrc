@@ -80,16 +80,16 @@ taglist()
 tabular()
 {
 
-    _TABULAR="tabular"
-    echo "INSTALL $_TABULAR start ..."
+    _PLUGIN="tabular"
+    echo "INSTALL $_PLUGIN start ..."
     echo "..."
-    if [ ! -d "$_TEMP_DIR/$_TABULAR" ]; then
-        mkdir $_TEMP_DIR/$_TABULAR
-        git clone https://github.com/godlygeek/tabular.git $_TEMP_DIR/$_TABULAR 
+    if [ ! -d "$_TEMP_DIR/$_PLUGIN" ]; then
+        mkdir $_TEMP_DIR/$_PLUGIN
+        git clone https://github.com/godlygeek/tabular.git $_TEMP_DIR/$_PLUGIN 
     fi
-    cp -rf $_TEMP_DIR/$_TABULAR/plugin $_VIM_HOME 
-    cp -rf $_TEMP_DIR/$_TABULAR/doc $_VIM_HOME
-    echo "INSTALL $_TABULAR success ..."
+    cp -rf $_TEMP_DIR/$_PLUGIN/plugin $_VIM_HOME 
+    cp -rf $_TEMP_DIR/$_PLUGIN/doc $_VIM_HOME
+    echo "INSTALL $_PLUGIN success ..."
     echo "..."
 
 }
@@ -150,13 +150,30 @@ vala()
     fi
     cp $_TEMP_DIR/vala.vim $_VIM_SYNTAX/
 }
+
+#python语法检测工具
+#需要安装 sudo apt-get install pyflakes
+pyflakes(){
+
+    _PLUGIN="pyflakes"
+    echo "INSTALL $_PLUGIN start ..."
+    echo "..."
+    if [ ! -d "$_TEMP_DIR/$_PLUGIN" ]; then
+        mkdir $_TEMP_DIR/$_PLUGIN
+        git clone https://github.com/kevinw/pyflakes-vim.git $_TEMP_DIR/$_PLUGIN 
+    fi
+    cp -rf $_TEMP_DIR/$_PLUGIN/ftplugin/ $_VIM_HOME 
+    echo "INSTALL $_PLUGIN success ..."
+}
+
 main()
 {
-    init;
-    c;
-    nerdtree;
-    taglist;
-    vala;
+     init;
+     c;
+     nerdtree;
+     taglist;
+     vala;
+     pyflakes;
     #tabular;
 }
 

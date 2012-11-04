@@ -69,6 +69,7 @@ set scrolloff=3   "光标移动到buffer的顶部和底部时保持3行距离
 "========================
 filetype on    "侦测文件类型
 filetype plugin on    "载入文件类型插件
+filetype plugin indent on   
 filetype indent on    "为特定文件类型载入相关缩进文件
 "setlocal omnifunc=javacomplete#Complete 
 " python不要 tab 
