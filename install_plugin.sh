@@ -23,7 +23,7 @@ _DEBUG=$*
 init()
 {
     if [ ! -f "/usr/bin/git" ];then
-        echo "WARN: You must install git"
+        echo "ERROR: You must install git"
         exit 0
     fi
     if [ "$_USER" = "root" ];then
@@ -57,7 +57,7 @@ init()
 taglist()
 {
     if [ ! -f "/usr/bin/ctags" ];then
-        echo "WARN: You must install ctags"
+        echo "ERROR: You must install ctags"
         exit 0
     fi
     _TAGLIST="taglist"
@@ -155,6 +155,10 @@ vala()
 #需要安装 sudo apt-get install pyflakes
 pyflakes(){
 
+    if [ ! -f "/usr/bin/pyflakes" ];then
+        echo "ERROR: You must install pyflakes"
+        exit 0
+    fi
     _PLUGIN="pyflakes"
     echo "INSTALL $_PLUGIN start ..."
     echo "..."
