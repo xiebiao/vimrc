@@ -23,8 +23,8 @@ _DEBUG=$*
 init()
 {
     if [ ! -f "/usr/bin/git" ];then
-        echo "ERROR: You must install git"
-        exit 0
+        echo "Install git ..."
+        sudo apt-get install git
     fi
     if [ "$_USER" = "root" ];then
         _VIM_HOME="/root/.vim"
@@ -57,8 +57,8 @@ init()
 taglist()
 {
     if [ ! -f "/usr/bin/ctags" ];then
-        echo "ERROR: You must install ctags"
-        exit 0
+        echo "Install ctags ..."
+        sudo apt-get install ctags
     fi
     _TAGLIST="taglist"
     echo "INSTALL $_TAGLIST start ..."
@@ -156,8 +156,8 @@ vala()
 pyflakes(){
 
     if [ ! -f "/usr/bin/pyflakes" ];then
-        echo "ERROR: You must install pyflakes"
-        exit 0
+        echo "Install pyflakes ..."
+        sudo apt-get install pyflakes
     fi
     _PLUGIN="pyflakes"
     echo "INSTALL $_PLUGIN start ..."
