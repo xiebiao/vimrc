@@ -30,6 +30,9 @@ init()
         _VIM_HOME="/root/.vim"
     else
         _VIM_HOME="/home/"$_USER"/.vim"
+        if [ ! -d "$_VIM_HOME" ];then
+            mkdir $_VIM_HOME
+        fi
         _VIMRC="/home/"$_USER"/.vimrc"
     fi
     rm -rf $_VIM_HOME/*
