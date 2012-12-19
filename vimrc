@@ -2,7 +2,7 @@
 "	Public
 "===================
 if has('mouse') 
-   set mouse=a 
+    set mouse=a       "可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
 endif 
 set cursorcolumn                 "光标所在列高亮(vim6.0以上)
 set cursorline                   "光标所在行高亮(vim6.0以上)
@@ -54,7 +54,6 @@ set linespace=0   "字符间插入的像素行数目
 set wildmenu   "增强模式中的命令行自动完成操作
 set backspace=2   "使回格键（backspace）正常处理indent, eol, start等
 set whichwrap+=<,>,h,l    "允许backspace和光标键跨越行边界
-set mouse=a       "可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
 set selection=exclusive
 set selectmode=mouse,key
 set report=0   "通过使用: commands命令，告诉我们文件的哪一行被改变过
