@@ -35,6 +35,7 @@ set ignorecase     "搜索忽略大小写
 "set hlsearch   "搜索逐字符高亮
 set incsearch
 set gdefault   "行内替换
+set ff=unix "设置fileformat为unix，windows下ff=dos
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set langmenu=zh_CN.UTF-8   "语言设置
 set helplang=cn
