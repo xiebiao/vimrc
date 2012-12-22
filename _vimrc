@@ -2,84 +2,77 @@
 "	Public
 "===================
 if has('mouse') 
-   set mouse=a 
+    set mouse=a       "å¯ä»¥åœ¨bufferçš„ä»»ä½•åœ°æ–¹ä½¿ç”¨é¼ æ ‡ï¼ˆç±»ä¼¼officeä¸­åœ¨å·¥ä½œåŒºåŒå‡»é¼ æ ‡å®šä½ï¼‰
 endif 
-set cursorcolumn                 "¹â±êËùÔÚÁĞ¸ßÁÁ(vim6.0ÒÔÉÏ)
-set cursorline                   "¹â±êËùÔÚĞĞ¸ßÁÁ(vim6.0ÒÔÉÏ)
-set textwidth=80                 "ÉèÖÃ70¸ö×Ö·û¾Í×Ô¶¯»»ĞĞ
-set guifont=Consolas:h13           "ÉèÖÃ×ÖÌå
-set nocompatible       "²»ÒªÊ¹ÓÃviµÄ¼üÅÌÄ£Ê½£¬¶øÊÇvim×Ô¼ºµÄ
-
-"set syntax=on    "¿ªÆôÓï·¨¸ßÁÁ
-syntax enable
-syntax on
-
-set noeb       "È¥µôÊäÈë´íÎóµÄÌáÊ¾ÉùÒô
-set confirm    "ÔÚ´¦ÀíÎ´±£´æ»òÖ»¶ÁÎÄ¼şµÄÊ±ºò£¬µ¯³öÈ·ÈÏ
-set smartindent   "ÎªC³ÌĞòÌá¹©×Ô¶¯Ëõ½ø
-set autoindent    "×Ô¶¯Ëõ½ø
+set cursorcolumn                 "å…‰æ ‡æ‰€åœ¨åˆ—é«˜äº®(vim6.0ä»¥ä¸Š)
+set cursorline                   "å…‰æ ‡æ‰€åœ¨è¡Œé«˜äº®(vim6.0ä»¥ä¸Š)
+set textwidth=80                 "è®¾ç½®70ä¸ªå­—ç¬¦å°±è‡ªåŠ¨æ¢è¡Œ
+set guifont=Monaco\ 12           "è®¾ç½®å­—ä½“
+set nocompatible       "ä¸è¦ä½¿ç”¨viçš„é”®ç›˜æ¨¡å¼ï¼Œè€Œæ˜¯vimè‡ªå·±çš„
+set syntax=on    "å¼€å¯è¯­æ³•é«˜äº®
+set noeb       "å»æ‰è¾“å…¥é”™è¯¯çš„æç¤ºå£°éŸ³
+set confirm    "åœ¨å¤„ç†æœªä¿å­˜æˆ–åªè¯»æ–‡ä»¶çš„æ—¶å€™ï¼Œå¼¹å‡ºç¡®è®¤
+set smartindent   "ä¸ºCç¨‹åºæä¾›è‡ªåŠ¨ç¼©è¿›
+set autoindent    "è‡ªåŠ¨ç¼©è¿›
 set cindent
-set tabstop=4      "Tab¼üµÄ¿í¶È
-"set list                          "ÏÔÊ¾Tab,±ãÓÚ²é¿´Ëõ½ø
+set tabstop=4      "Tabé”®çš„å®½åº¦
+"set list                          "æ˜¾ç¤ºTab,ä¾¿äºæŸ¥çœ‹ç¼©è¿›
 "set listchars=tab:+.,trail:.
 
-set expandtab	   "Ê¹ÓÃ¿Õ¸ñ´úÌætab£¬ÒòÎªËû²»ÔÚ²»Í¬±à¼­Æ÷ÉÏÏÔÊ¾²»Ò»ÖÂ
-"set noexpandtab   "²»ÒªÓÃ¿Õ¸ñ´úÌæÖÆ±í·û
-set softtabstop=4    "Í³Ò»Ëõ½øÎª4
+set expandtab	   "ä½¿ç”¨ç©ºæ ¼ä»£æ›¿tabï¼Œå› ä¸ºä»–ä¸åœ¨ä¸åŒç¼–è¾‘å™¨ä¸Šæ˜¾ç¤ºä¸ä¸€è‡´
+"set noexpandtab   "ä¸è¦ç”¨ç©ºæ ¼ä»£æ›¿åˆ¶è¡¨ç¬¦
+set softtabstop=4    "ç»Ÿä¸€ç¼©è¿›ä¸º4
 set shiftwidth=4
 
-set smarttab    "ÔÚĞĞºÍ¶Î¿ªÊ¼´¦Ê¹ÓÃÖÆ±í·û
-set number  "ÏÔÊ¾ĞĞºÅ
-set ruler  "ÏÔÊ¾ÁĞºÅ
-set history=50   "ÀúÊ·¼ÇÂ¼Êı
-set nobackup   "½ûÖ¹Éú³ÉÁÙÊ±ÎÄ¼ş
+set smarttab    "åœ¨è¡Œå’Œæ®µå¼€å§‹å¤„ä½¿ç”¨åˆ¶è¡¨ç¬¦
+set number  "æ˜¾ç¤ºè¡Œå·
+set ruler  "æ˜¾ç¤ºåˆ—å·
+set history=50   "å†å²è®°å½•æ•°
+set nobackup   "ç¦æ­¢ç”Ÿæˆä¸´æ—¶æ–‡ä»¶
 set noswapfile
-set ignorecase     "ËÑË÷ºöÂÔ´óĞ¡Ğ´
-"	set ic			"ËÑË÷ºöÂÔ´óĞ¡Ğ´
-"set hlsearch   "ËÑË÷Öğ×Ö·û¸ßÁÁ
+set ignorecase     "æœç´¢å¿½ç•¥å¤§å°å†™
+"	set ic			"æœç´¢å¿½ç•¥å¤§å°å†™
+"set hlsearch   "æœç´¢é€å­—ç¬¦é«˜äº®
 set incsearch
-set gdefault   "ĞĞÄÚÌæ»»
-
-"set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
-"set fenc=utf-8
-
-"set langmenu=zh_CN.UTF-8   "ÓïÑÔÉèÖÃ
-"set helplang=cn
-set fileencodings=utf-8,gbk,ucs-bom,cp936,unicode,latin-1   "ÉèÖÃÎÄ¼ş±àÂëÁĞ±í
-"set enc=utf-8   "±àÂëÉèÖÃ
-"set encoding=utf-8
-"
-" ÎÒµÄ×´Ì¬ĞĞÏÔÊ¾µÄÄÚÈİ£¨°üÀ¨ÎÄ¼şÀàĞÍºÍ½âÂë£©
+set gdefault   "è¡Œå†…æ›¿æ¢
+set ff=unix "è®¾ç½®fileformatä¸ºunixï¼Œwindowsä¸‹ff=dos
+set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+set langmenu=zh_CN.UTF-8   "è¯­è¨€è®¾ç½®
+set helplang=cn
+set fileencodings=utf-8,gbk,ucs-bom,cp936,unicode,latin-1   "è®¾ç½®æ–‡ä»¶ç¼–ç åˆ—è¡¨
+set enc=utf-8   "ç¼–ç è®¾ç½®
+set fileencoding=utf-8
+set encoding=utf-8
+" æˆ‘çš„çŠ¶æ€è¡Œæ˜¾ç¤ºçš„å†…å®¹ï¼ˆåŒ…æ‹¬æ–‡ä»¶ç±»å‹å’Œè§£ç ï¼‰
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 "set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
-set laststatus=2  "×ÜÊÇÏÔÊ¾×´Ì¬ĞĞ
-set ruler             "ÔÚ±à¼­¹ı³ÌÖĞ£¬ÔÚÓÒÏÂ½ÇÏÔÊ¾¹â±êÎ»ÖÃµÄ×´Ì¬ĞĞ
-set cmdheight=1   "ÃüÁîĞĞ£¨ÔÚ×´Ì¬ĞĞÏÂ£©µÄ¸ß¶È£¬Ä¬ÈÏÎª1£¬ÕâÀïÊÇ2
-set viminfo+=!   " ±£´æÈ«¾Ö±äÁ¿
-set iskeyword+=_,$,@,%,#,-   " ´øÓĞÈçÏÂ·ûºÅµÄµ¥´Ê²»Òª±»»»ĞĞ·Ö¸î
-set linespace=0   "×Ö·û¼ä²åÈëµÄÏñËØĞĞÊıÄ¿
-set wildmenu   "ÔöÇ¿Ä£Ê½ÖĞµÄÃüÁîĞĞ×Ô¶¯Íê³É²Ù×÷
-set backspace=2   "Ê¹»Ø¸ñ¼ü£¨backspace£©Õı³£´¦Àíindent, eol, startµÈ
-set whichwrap+=<,>,h,l    "ÔÊĞíbackspaceºÍ¹â±ê¼ü¿çÔ½ĞĞ±ß½ç
-set mouse=a       "¿ÉÒÔÔÚbufferµÄÈÎºÎµØ·½Ê¹ÓÃÊó±ê£¨ÀàËÆofficeÖĞÔÚ¹¤×÷ÇøË«»÷Êó±ê¶¨Î»£©
+set laststatus=2  "æ€»æ˜¯æ˜¾ç¤ºçŠ¶æ€è¡Œ
+set ruler             "åœ¨ç¼–è¾‘è¿‡ç¨‹ä¸­ï¼Œåœ¨å³ä¸‹è§’æ˜¾ç¤ºå…‰æ ‡ä½ç½®çš„çŠ¶æ€è¡Œ
+set cmdheight=1   "å‘½ä»¤è¡Œï¼ˆåœ¨çŠ¶æ€è¡Œä¸‹ï¼‰çš„é«˜åº¦ï¼Œé»˜è®¤ä¸º1ï¼Œè¿™é‡Œæ˜¯2
+set viminfo+=!   " ä¿å­˜å…¨å±€å˜é‡
+set iskeyword+=_,$,@,%,#,-   " å¸¦æœ‰å¦‚ä¸‹ç¬¦å·çš„å•è¯ä¸è¦è¢«æ¢è¡Œåˆ†å‰²
+set linespace=0   "å­—ç¬¦é—´æ’å…¥çš„åƒç´ è¡Œæ•°ç›®
+set wildmenu   "å¢å¼ºæ¨¡å¼ä¸­çš„å‘½ä»¤è¡Œè‡ªåŠ¨å®Œæˆæ“ä½œ
+set backspace=2   "ä½¿å›æ ¼é”®ï¼ˆbackspaceï¼‰æ­£å¸¸å¤„ç†indent, eol, startç­‰
+set whichwrap+=<,>,h,l    "å…è®¸backspaceå’Œå…‰æ ‡é”®è·¨è¶Šè¡Œè¾¹ç•Œ
 set selection=exclusive
 set selectmode=mouse,key
-set report=0   "Í¨¹ıÊ¹ÓÃ: commandsÃüÁî£¬¸æËßÎÒÃÇÎÄ¼şµÄÄÄÒ»ĞĞ±»¸Ä±ä¹ı
-"set shortmess=atI   "Æô¶¯µÄÊ±ºò²»ÏÔÊ¾ÄÇ¸öÔ®ÖúË÷ÂíÀï¶ùÍ¯µÄÌáÊ¾(ÎÒÃÇÓ¦¸ÃÏÔÊ¾)
-set fillchars=vert:\ ,stl:\ ,stlnc:\   "ÔÚ±»·Ö¸îµÄ´°¿Ú¼äÏÔÊ¾¿Õ°×£¬±ãÓÚÔÄ¶Á
-set showmatch   "¸ßÁÁÏÔÊ¾Æ¥ÅäµÄÀ¨ºÅ
-set matchtime=5   "Æ¥ÅäÀ¨ºÅ¸ßÁÁµÄÊ±¼ä£¨µ¥Î»ÊÇÊ®·ÖÖ®Ò»Ãë£©
-set scrolloff=3   "¹â±êÒÆ¶¯µ½bufferµÄ¶¥²¿ºÍµ×²¿Ê±±£³Ö3ĞĞ¾àÀë
-"set path +=/usr/include "CÓïÑÔÍ·ÎÄ¼ş²éÕÒÎ»ÖÃ
+set report=0   "é€šè¿‡ä½¿ç”¨: commandså‘½ä»¤ï¼Œå‘Šè¯‰æˆ‘ä»¬æ–‡ä»¶çš„å“ªä¸€è¡Œè¢«æ”¹å˜è¿‡
+"set shortmess=atI   "å¯åŠ¨çš„æ—¶å€™ä¸æ˜¾ç¤ºé‚£ä¸ªæ´åŠ©ç´¢é©¬é‡Œå„¿ç«¥çš„æç¤º(æˆ‘ä»¬åº”è¯¥æ˜¾ç¤º)
+set fillchars=vert:\ ,stl:\ ,stlnc:\   "åœ¨è¢«åˆ†å‰²çš„çª—å£é—´æ˜¾ç¤ºç©ºç™½ï¼Œä¾¿äºé˜…è¯»
+set showmatch   "é«˜äº®æ˜¾ç¤ºåŒ¹é…çš„æ‹¬å·
+set matchtime=5   "åŒ¹é…æ‹¬å·é«˜äº®çš„æ—¶é—´ï¼ˆå•ä½æ˜¯ååˆ†ä¹‹ä¸€ç§’ï¼‰
+set scrolloff=3   "å…‰æ ‡ç§»åŠ¨åˆ°bufferçš„é¡¶éƒ¨å’Œåº•éƒ¨æ—¶ä¿æŒ3è¡Œè·ç¦»
+"set path +=/usr/include "Cè¯­è¨€å¤´æ–‡ä»¶æŸ¥æ‰¾ä½ç½®
 "========================
 "	File types
 "========================
-filetype on    "Õì²âÎÄ¼şÀàĞÍ
-filetype plugin on    "ÔØÈëÎÄ¼şÀàĞÍ²å¼ş
+filetype on    "ä¾¦æµ‹æ–‡ä»¶ç±»å‹
+filetype plugin on    "è½½å…¥æ–‡ä»¶ç±»å‹æ’ä»¶
 filetype plugin indent on   
-filetype indent on    "ÎªÌØ¶¨ÎÄ¼şÀàĞÍÔØÈëÏà¹ØËõ½øÎÄ¼ş
+filetype indent on    "ä¸ºç‰¹å®šæ–‡ä»¶ç±»å‹è½½å…¥ç›¸å…³ç¼©è¿›æ–‡ä»¶
 "setlocal omnifunc=javacomplete#Complete 
-" python²»Òª tab 
+" pythonä¸è¦ tab 
 autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -93,9 +86,8 @@ autocmd FileType java set omnifunc=javacomplete#Complete
 "	Colors
 "===================
 "colorscheme murphy 
-"colorscheme desert
-colorscheme murphy
-"colorscheme devbox-dark-256
+"colorscheme my_desert
+colorscheme devbox-dark-256 
 "colorscheme darkblue
 "colorscheme darkburn
 "colorscheme lucius
@@ -107,27 +99,27 @@ colorscheme murphy
 "	Key map
 "===================
 map <F4> :NERDTree<cr>
-" ÊÖ¶¯Ë¢ĞÂÎÄ¼ş
+" æ‰‹åŠ¨åˆ·æ–°æ–‡ä»¶
 map <F5> :e!<cr>    
 map <F12> :TlistToggle<cr>
-"ÔÚÕı³£Ä£Ê½ÏÂ¹â±êÔÚ´°¿ÚÖĞÒÆ¶¯¿ì½İ¼ü
+"åœ¨æ­£å¸¸æ¨¡å¼ä¸‹å…‰æ ‡åœ¨çª—å£ä¸­ç§»åŠ¨å¿«æ·é”®
 nmap <S-l> :wincmd w<cr>
-" ÉèÖÃ Ctrl + s ±£´æµ±Ç°ÎÄ¼ş
-" ÓÉÓÚCtrl+S±»ÆäËûÊ¹ÓÃ£¬Ê×ÏÈÒªĞŞ¸Ä~/.bashrcÎÄ¼ş£¬ÔÚ×îºó¼ÓÉÏ
+" è®¾ç½® Ctrl + s ä¿å­˜å½“å‰æ–‡ä»¶
+" ç”±äºCtrl+Sè¢«å…¶ä»–ä½¿ç”¨ï¼Œé¦–å…ˆè¦ä¿®æ”¹~/.bashrcæ–‡ä»¶ï¼Œåœ¨æœ€ååŠ ä¸Š
 " stty stop ''
 map <silent><C-s> :update<CR>
 inoremap <C-s> <ESC>:update<CR>a
 "===================
 "   Taglist
 "===================
-"if MySys() == "windows"                "Éè¶¨windowsÏµÍ³ÖĞctags³ÌĞòµÄÎ»ÖÃ
+"if MySys() == "windows"                "è®¾å®šwindowsç³»ç»Ÿä¸­ctagsç¨‹åºçš„ä½ç½®
 "	   let Tlist_Ctags_Cmd = 'ctags'
-"elseif MySys() == "linux"              "Éè¶¨windowsÏµÍ³ÖĞctags³ÌĞòµÄÎ»ÖÃ
+"elseif MySys() == "linux"              "è®¾å®šwindowsç³»ç»Ÿä¸­ctagsç¨‹åºçš„ä½ç½®
 "	   let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 "endif
-"let Tlist_Auto_Open=1                  "Ä¬ÈÏ´ò¿ªtaglist
+"let Tlist_Auto_Open=1                  "é»˜è®¤æ‰“å¼€taglist
 let Tlist_Auto_Open=0               
-let Tlist_Show_One_File = 1            "²»Í¬Ê±ÏÔÊ¾¶à¸öÎÄ¼şµÄtag£¬Ö»ÏÔÊ¾µ±Ç°ÎÄ¼şµÄ
-let Tlist_Exit_OnlyWindow = 1          "Èç¹ûtaglist´°¿ÚÊÇ×îºóÒ»¸ö´°¿Ú£¬ÔòÍË³övim
-let Tlist_Use_Right_Window = 1         "ÔÚÓÒ²à´°¿ÚÖĞÏÔÊ¾taglist´°¿Ú
-
+let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+let Tlist_Show_One_File = 1            "ä¸åŒæ—¶æ˜¾ç¤ºå¤šä¸ªæ–‡ä»¶çš„tagï¼Œåªæ˜¾ç¤ºå½“å‰æ–‡ä»¶çš„
+let Tlist_Exit_OnlyWindow = 1          "å¦‚æœtaglistçª—å£æ˜¯æœ€åä¸€ä¸ªçª—å£ï¼Œåˆ™é€€å‡ºvim
+let Tlist_Use_Right_Window = 1         "åœ¨å³ä¾§çª—å£ä¸­æ˜¾ç¤ºtaglistçª—å£
