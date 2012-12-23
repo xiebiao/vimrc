@@ -12,19 +12,26 @@ set nocompatible       "不要使用vi的键盘模式，而是vim自己的
 set syntax=on    "开启语法高亮
 set noeb       "去掉输入错误的提示声音
 set confirm    "在处理未保存或只读文件的时候，弹出确认
-set smartindent   "为C程序提供自动缩进
-set autoindent    "自动缩进
-set cindent
-set tabstop=4      "Tab键的宽度
-"set list                          "显示Tab,便于查看缩进
-"set listchars=tab:+.,trail:.
+
+"===================
+"	indent
+"===================
+
+"filetype plugin indent on   
+"filetype indent on    "为特定文件类型载入相关缩进文件
+"set smartindent   "为C程序提供自动缩进
+"set autoindent    "自动缩进
+"set cindent       "C/C++语言风格缩进
+set tabstop=4      "制表符号宽度
+set softtabstop=4    "统一缩进为4
+set list                          "显示Tab,便于查看缩进
+set listchars=tab:+.,trail:.
 
 set expandtab	   "使用空格代替tab，因为他不在不同编辑器上显示不一致
-"set noexpandtab   "不要用空格代替制表符
-set softtabstop=4    "统一缩进为4
-set shiftwidth=4
+set noexpandtab   "不要用空格代替制表符
+set shiftwidth=4   "设置缩进的空格数为4
+"set smarttab    "在行和段开始处使用制表符
 
-set smarttab    "在行和段开始处使用制表符
 set number  "显示行号
 set ruler  "显示列号
 set history=50   "历史记录数
@@ -69,8 +76,6 @@ set scrolloff=3   "光标移动到buffer的顶部和底部时保持3行距离
 "========================
 filetype on    "侦测文件类型
 filetype plugin on    "载入文件类型插件
-filetype plugin indent on   
-filetype indent on    "为特定文件类型载入相关缩进文件
 "setlocal omnifunc=javacomplete#Complete 
 " python不要 tab 
 autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
