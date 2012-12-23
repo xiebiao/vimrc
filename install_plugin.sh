@@ -173,6 +173,23 @@ pyflakes(){
     echo "INSTALL $_PLUGIN success ..."
 }
 
+cscope(){
+    # http://graceco.de/manual/cscope_vim_tutorial_zh.html
+    if [ ! -f "/usr/bin/cscope" ];then
+        echo "Install cscope ..."
+        sudo apt-get install cscope 
+    fi
+    _PLUGIN="cscope"
+    echo "INSTALL $_PLUGIN start ..."
+    echo "..."
+    if [ ! -d "$_TEMP_DIR/$_PLUGIN" ]; then
+        mkdir $_TEMP_DIR/$_PLUGIN
+        git clone https://github.com/vim-scripts/cscope.vim.git $_TEMP_DIR/$_PLUGIN 
+    fi
+    cp -rf $_TEMP_DIR/$_PLUGIN/plugin/ $_VIM_HOME 
+    echo "INSTALL $_PLUGIN success ..."
+}
+
 main()
 {
      init;
@@ -181,6 +198,7 @@ main()
      taglist;
      vala;
      pyflakes;
+     cscope;
     #tabular;
 }
 

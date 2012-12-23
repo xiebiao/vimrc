@@ -99,7 +99,7 @@ colorscheme devbox-dark-256
 "	Key map
 "===================
 map <F4> :NERDTree<cr>
-" 手动刷新文件
+"手动刷新文件内容
 map <F5> :e!<cr>    
 map <F12> :TlistToggle<cr>
 "在正常模式下光标在窗口中移动快捷键
@@ -109,17 +109,26 @@ nmap <S-l> :wincmd w<cr>
 " stty stop ''
 map <silent><C-s> :update<CR>
 inoremap <C-s> <ESC>:update<CR>a
+
+"===================
+"   cscope 
+"===================
+
+
+
 "===================
 "   Taglist
 "===================
-"if MySys() == "windows"                "设定windows系统中ctags程序的位置
-"	   let Tlist_Ctags_Cmd = 'ctags'
-"elseif MySys() == "linux"              "设定windows系统中ctags程序的位置
-"	   let Tlist_Ctags_Cmd = '/usr/bin/ctags'
-"endif
+
+"设定系统中ctags程序的位置
+if has("win32")
+	   let Tlist_Ctags_Cmd = 'ctags'
+elseif has("linux") 
+	   let Tlist_Ctags_Cmd = '/usr/bin/ctags'
+endif
+
 "let Tlist_Auto_Open=1                  "默认打开taglist
 let Tlist_Auto_Open=0               
-let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 let Tlist_Show_One_File = 1            "不同时显示多个文件的tag，只显示当前文件的
 let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
 let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
