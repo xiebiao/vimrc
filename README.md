@@ -11,10 +11,5 @@
 $ sudo apt-get install ctags  
 $ git clone https://github.com/xiaog/vimer  
 $ cd vimer  
-$ ./install_vimrc.sh  
-$ ./install_plugin.sh  
+$ ./bootstrap.sh
 
-说明
-==========
-如果想测试vim默认配置情况下的行为  
-$ ./install_vimrc.sh vimrc.empty  

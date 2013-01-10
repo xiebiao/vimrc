@@ -11,12 +11,14 @@
 _CURRENT_PATH=`pwd`
 _TEMP_DIR=$_CURRENT_PATH/temp
 _USER=`whoami`
+_USER_HOME="/home/"$_USER"/"
 _VIM_HOME=""
 _VIMRC=""
 _VIM_PLUGIN=""
 _VIM_SYNTAX=""
 _VIM_DOC=""
 _VIM_FTPLUGIN=""
+_VIM_COLORS=""
 
 _DEBUG=$*
 
@@ -35,11 +37,15 @@ init()
         fi
         _VIMRC="/home/"$_USER"/.vimrc"
     fi
+	echo "_VIMRC=$_VIMRC"
+	echo "_VIM_HOME=$_VIM_HOME"
+	echo "_USER_HOME=$_USER_HOME"
     rm -rf $_VIM_HOME/*
     _VIM_PLUGIN=$_VIM_HOME"/plugin"
     _VIM_DOC=$_VIM_HOME"/doc"
     _VIM_FTPLUGIN=$_VIM_HOME"/ftplugin"
     _VIM_SYNTAX=$_VIM_HOME"/syntax"
+	_VIM_COLORS=$_VIM_HOME"/colors"
 
     if [ ! -d "$_VIM_PLUGIN" ]; then
         echo "mkdir $_VIM_PLUGIN ..."
@@ -49,12 +55,27 @@ init()
         echo "mkdir $_VIM_FTPLUGIN ..."
         mkdir $_VIM_FTPLUGIN
     fi
+    if [ ! -d "$_VIM_COLORS" ]; then
+        echo "mkdir $_VIM_COLORS ..."
+        mkdir $_VIM_COLORS
+    fi
     rm -rf $_TEMP_DIR
     if [ ! -d "$_TEMP_DIR" ]; then
         echo "mkdir $_TEMP_DIR ..."
         mkdir "$_TEMP_DIR"
     fi
 }
+
+vimrc(){
+
+	_VIMRC=".vimrc"
+	_SHELL_PATH=`dirname $0`
+	echo $_SHELL_PATH
+	cp $_SHELL_PATH/$_VIMRC $_USER_HOME$_VIMRC
+	echo "Copy $_SHELL_PATH/$_VIMRC to "$_USER_HOME$_VIMRC
+	cp $_SHELL_PATH/colors/* $_VIM_COLORS 
+}
+
 pathogen(){
 	
 	PLUGIN="vim-pathogen"
@@ -203,6 +224,7 @@ cscope(){
 main()
 {
      init;
+	 vimrc;
 	 c;
      nerdtree;
      taglist;
@@ -213,5 +235,4 @@ main()
 }
 
 main
-./install_vimrc.sh
 
