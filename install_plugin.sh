@@ -55,7 +55,16 @@ init()
         mkdir "$_TEMP_DIR"
     fi
 }
+pathogen(){
+	
+	PLUGIN="vim-pathogen"
 
+    if [ ! -d "$_TEMP_DIR/$PLUGIN" ]; then
+		mkdir $_TEMP_DIR/$PLUGIN
+		git clone	https://github.com/tpope/vim-pathogen.git $_TEMP_DIR/$PLUGIN
+	fi
+	cp -rf $_TEMP_DIR/$PLUGIN/autoload  $_VIM_HOME
+}
 # taglist.vim
 taglist()
 {
@@ -99,16 +108,17 @@ tabular()
 # NERDTree
 nerdtree()
 {
-    _NERDTREE="nerdtree"
-    echo "INSTALL $_NERDTREE start ..."
+	pathogen;
+    PLUGIN="nerdtree"
+    echo "INSTALL $PLUGIN start ..."
     echo "..."
-    if [ ! -d "$_TEMP_DIR/$_NERDTREE" ]; then
-        mkdir $_TEMP_DIR/$_NERDTREE
-        git clone https://github.com/scrooloose/nerdtree.git $_TEMP_DIR/$_NERDTREE
+    if [ ! -d "$_TEMP_DIR/$PLUGIN" ]; then
+        mkdir $_TEMP_DIR/$PLUGIN
+        git clone https://github.com/scrooloose/nerdtree.git $_TEMP_DIR/$PLUGIN
     fi
-    cp -rf $_TEMP_DIR/$_NERDTREE/plugin $_VIM_HOME
-    cp -rf $_TEMP_DIR/$_NERDTREE/doc $_VIM_HOME
-    echo "INSTALL $_NERDTREE success ..."
+	mkdir -p $_VIM_HOME/bundle/
+    cp -rf $_TEMP_DIR/$PLUGIN/ $_VIM_HOME/bundle/
+    echo "INSTALL $PLUGIN success ..."
     echo "..." 
 }
 # a.vim
@@ -193,10 +203,10 @@ cscope(){
 main()
 {
      init;
-     c;
+	 c;
      nerdtree;
      taglist;
-     vala;
+    # vala;
      pyflakes;
      cscope;
     #tabular;

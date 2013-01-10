@@ -24,8 +24,8 @@ set confirm    "在处理未保存或只读文件的时候，弹出确认
 "set cindent       "C/C++语言风格缩进
 set tabstop=4      "制表符号宽度
 set softtabstop=4    "统一缩进为4
-set list                          "显示Tab,便于查看缩进
-set listchars=tab:+.,trail:.
+"set list                          "显示Tab,便于查看缩进
+"set listchars=tab:+.,trail:.
 
 set expandtab	   "使用空格代替tab，因为他不在不同编辑器上显示不一致
 set noexpandtab   "不要用空格代替制表符
@@ -74,6 +74,8 @@ set scrolloff=3   "光标移动到buffer的顶部和底部时保持3行距离
 "========================
 "	File types
 "========================
+"开启pathogen插件
+execute pathogen#infect()  
 filetype on    "侦测文件类型
 filetype plugin on    "载入文件类型插件
 "setlocal omnifunc=javacomplete#Complete 
