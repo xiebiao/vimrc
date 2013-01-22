@@ -19,9 +19,9 @@ set confirm    "在处理未保存或只读文件的时候，弹出确认
 
 "filetype plugin indent on   
 "filetype indent on    "为特定文件类型载入相关缩进文件
-"set smartindent   "为C程序提供自动缩进
+set smartindent   "为C程序提供自动缩进
 "set autoindent    "自动缩进
-"set cindent       "C/C++语言风格缩进
+set cindent       "C/C++语言风格缩进
 set tabstop=4      "制表符号宽度
 set softtabstop=4    "统一缩进为4
 "set list                          "显示Tab,便于查看缩进
