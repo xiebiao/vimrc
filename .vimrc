@@ -92,9 +92,10 @@ autocmd FileType java set omnifunc=javacomplete#Complete
 "===================
 "	Colors
 "===================
-"colorscheme murphy 
+colorscheme murphy 
 "colorscheme my_desert
-colorscheme devbox-dark-256 
+"colorscheme desert
+"colorscheme devbox-dark-256 
 "colorscheme darkblue
 "colorscheme darkburn
 "colorscheme lucius
