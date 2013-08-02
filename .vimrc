@@ -1,6 +1,6 @@
-"===================
-"	Public
-"===================
+"=======================
+"	Public(公共)
+"=======================
 if has('mouse') 
     set mouse=a       "可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
 endif 
@@ -13,9 +13,9 @@ set syntax=on    "开启语法高亮
 set noeb       "去掉输入错误的提示声音
 set confirm    "在处理未保存或只读文件的时候，弹出确认
 
-"===================
-"	indent
-"===================
+"=======================
+"	Indent(缩进)
+"=======================
 
 "filetype plugin indent on   
 "filetype indent on    "为特定文件类型载入相关缩进文件
@@ -71,9 +71,10 @@ set showmatch   "高亮显示匹配的括号
 set matchtime=5   "匹配括号高亮的时间（单位是十分之一秒）
 set scrolloff=3   "光标移动到buffer的顶部和底部时保持3行距离
 "set path +=/usr/include "C语言头文件查找位置
-"========================
-"	File types
-"========================
+"============================
+"	File types(文件类型)
+"============================
+"
 "开启pathogen插件
 execute pathogen#infect()  
 filetype on    "侦测文件类型
@@ -89,9 +90,10 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType java set omnifunc=javacomplete#Complete
 
-"===================
-"	Colors
-"===================
+"=======================
+"	Colors(配色)
+"=======================
+"
 colorscheme murphy 
 "colorscheme my_desert
 "colorscheme desert
@@ -103,30 +105,33 @@ colorscheme murphy
 "colorscheme skittles_dark
 "
 
-"===================
-"	Key map
-"===================
-map <F4> :NERDTree<cr>
+"=======================
+"	Key map(快捷键映射)
+"=======================
+map <F4> :NERDTree<CR>
 "手动刷新文件内容
-map <F5> :e!<cr>    
-map <F12> :TlistToggle<cr>
+map <F5> :e!<CR>    
+
+map <F12> :TlistToggle<CR>
 "在正常模式下光标在窗口中移动快捷键
-nmap <S-l> :wincmd w<cr>
+nmap <S-l> :wincmd w<CR>
 " 设置 Ctrl + s 保存当前文件
 " 由于Ctrl+S被其他使用，首先要修改~/.bashrc文件，在最后加上
 " stty stop ''
+map <C-s> :w<CR>
+imap <C-s> <C-o>:w<CR>
 map <silent><C-s> :update<CR>
 inoremap <C-s> <ESC>:update<CR>a
 
-"===================
+"========================
 "   cscope 
-"===================
+"========================
 
 
 
-"===================
+"=======================
 "   Taglist
-"===================
+"=======================
 
 "设定系统中ctags程序的位置
 if has("win32")
