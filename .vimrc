@@ -12,6 +12,8 @@ set nocompatible       "不要使用vi的键盘模式，而是vim自己的
 set syntax=on    "开启语法高亮
 set noeb       "去掉输入错误的提示声音
 set confirm    "在处理未保存或只读文件的时候，弹出确认
+set clipboard+=unnamed   "和外界共享粘贴板内容
+set nocompatible   "不兼容vi
 
 "=======================
 "	Indent(缩进)
