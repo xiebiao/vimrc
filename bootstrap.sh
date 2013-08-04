@@ -5,11 +5,11 @@
 #--------------
 
 #
-#   NOTE:Make sure you have INSTALLed git and ctags
+#   NOTE: This script just tested on Ubuntu 12.04
 #
 
 _CURRENT_PATH=`pwd`
-_TEMP_DIR=$_CURRENT_PATH/temp
+_TEMP_DIR=$_CURRENT_PATH/plugins
 _USER=`whoami`
 _USER_HOME="/home/"$_USER"/"
 _VIM_HOME=""
@@ -20,13 +20,22 @@ _VIM_DOC=""
 _VIM_FTPLUGIN=""
 _VIM_COLORS=""
 
-_DEBUG=$*
+_INSTALL=$*
+
+_DEBUG_INSTALL="INSTALL "
+_DEBUG_SUCCESS=" SUCCESS ..."
+_DEBUG_FAILED=" FAILED ..."
 
 init()
 {
     if [ ! -f "/usr/bin/git" ];then
-        echo "Install git ..."
+        echo $_DEBUG_INSTALL"git ..."
         sudo apt-get install git
+		if [ ! $? = 0 ];then
+			echo $_DEBUG_INSTALL"git"$_DEBUG_FAILED
+			exit;
+	    fi
+	    echo $_DEBUG_INSTALL"git"$_DEBUG_SUCCESS
     fi
     if [ "$_USER" = "root" ];then
         _VIM_HOME="/root/.vim"
@@ -37,9 +46,11 @@ init()
         fi
         _VIMRC="/home/"$_USER"/.vimrc"
     fi
+
 	echo "_VIMRC=$_VIMRC"
 	echo "_VIM_HOME=$_VIM_HOME"
 	echo "_USER_HOME=$_USER_HOME"
+
     rm -rf $_VIM_HOME/*
     _VIM_PLUGIN=$_VIM_HOME"/plugin"
     _VIM_DOC=$_VIM_HOME"/doc"
@@ -72,10 +83,12 @@ vimrc(){
 	_SHELL_PATH=`dirname $0`
 	echo $_SHELL_PATH
 	cp $_SHELL_PATH/$_VIMRC $_USER_HOME$_VIMRC
-	echo "Copy $_SHELL_PATH/$_VIMRC to "$_USER_HOME$_VIMRC
+	echo "Copy $_SHELL_PATH/$_VIMRC to "$_USER_HOME$_VIMRC" ..."
 	cp $_SHELL_PATH/colors/* $_VIM_COLORS 
+	echo "Done ..."
 }
 
+#---- 管理所有插件的工具
 pathogen(){
 	
 	PLUGIN="vim-pathogen"
@@ -85,16 +98,21 @@ pathogen(){
 		git clone	https://github.com/tpope/vim-pathogen.git $_TEMP_DIR/$PLUGIN
 	fi
 	cp -rf $_TEMP_DIR/$PLUGIN/autoload  $_VIM_HOME
+	echo "$_DEBUG_INSTALL $_PLUGIN $_DEBUG_SUCCESS\n"
 }
-# taglist.vim
+#----  taglist.vim
 taglist()
 {
     if [ ! -f "/usr/bin/ctags" ];then
-        echo "Install ctags ..."
+        echo $_DEBUG_INSTALL" ctags ..."
         sudo apt-get install ctags
+		if [ ! $? = 0 ];then
+			echo $_DEBUG_INSTALL"ctags"$_DEBUG_FAILED
+			exit;
+	    fi
     fi
     _TAGLIST="taglist"
-    echo "INSTALL $_TAGLIST start ..."
+    echo $_DEBUG_INSTALL"$_TAGLIST start ..."
     echo "..."
     _TAGLIST_FILE="taglist.zip"
 
@@ -106,24 +124,21 @@ taglist()
     fi
     cp -rf $_TEMP_DIR/$_TAGLIST/plugin $_VIM_HOME 
     cp -rf $_TEMP_DIR/$_TAGLIST/doc $_VIM_HOME
-    echo "INSTALL $_TAGLIST success ..."
-    echo "..."
+    echo "$_DEBUG_INSTALL $_TAGLIST $_DEBUG_SUCCESS\n"
 }
-#   INSTALL https://github.com/godlygeek/tabular.git
+#----    INSTALL https://github.com/godlygeek/tabular.git
 tabular()
 {
 
     _PLUGIN="tabular"
     echo "INSTALL $_PLUGIN start ..."
-    echo "..."
     if [ ! -d "$_TEMP_DIR/$_PLUGIN" ]; then
         mkdir $_TEMP_DIR/$_PLUGIN
         git clone https://github.com/godlygeek/tabular.git $_TEMP_DIR/$_PLUGIN 
     fi
     cp -rf $_TEMP_DIR/$_PLUGIN/plugin $_VIM_HOME 
     cp -rf $_TEMP_DIR/$_PLUGIN/doc $_VIM_HOME
-    echo "INSTALL $_PLUGIN success ..."
-    echo "..."
+    echo "$_DEBUG_INSTALL $_PLUGIN $_DEBUG_SUCCESS\n"
 
 }
 # NERDTree
@@ -139,8 +154,7 @@ nerdtree()
     fi
 	mkdir -p $_VIM_HOME/bundle/
     cp -rf $_TEMP_DIR/$PLUGIN/ $_VIM_HOME/bundle/
-    echo "INSTALL $PLUGIN success ..."
-    echo "..." 
+    echo "$_DEBUG_INSTALL $PLUGIN $_DEBUG_SUCCESS\n"
 }
 # a.vim
 # A few of quick commands to swtich between source files and header files
@@ -151,7 +165,7 @@ a(){
     echo "..."
     wget -q -nd -O $_VIM_PLUGIN/$_A \
     http://www.vim.org/scripts/download_script.php?src_id=7218
-    echo "INSTALL $_A success ..."
+    echo "$_DEBUG_INSTALL $_A $_DEBUG_SUCCESS\n"
     echo "..."
 }
 
@@ -161,6 +175,7 @@ a(){
 # Speed up writing new code considerably. 
 # Write code und comments with a professional appearance from the beginning. 
 # Use code snippets
+
 c()
 {
     _C_FILE="cvim"
@@ -171,9 +186,9 @@ c()
         git clone https://github.com/vim-scripts/c.vim.git $_TEMP_DIR/$_C_FILE
     fi
     cp -rf $_TEMP_DIR/$_C_FILE/* $_VIM_HOME/
-    echo "INSTALL $_C_FILE success ..."
-    echo "..."
+    echo "$_DEBUG_INSTALL $_C_FILE $_DEBUG_SUCCESS\n"
 }
+
 vala()
 {
     wget -O $_TEMP_DIR/vala.vim \
@@ -185,8 +200,8 @@ vala()
     cp $_TEMP_DIR/vala.vim $_VIM_SYNTAX/
 }
 
-#python语法检测工具
-#需要安装 sudo apt-get install pyflakes
+#---- python语法检测工具
+#---- 需要安装 sudo apt-get install pyflakes
 pyflakes(){
 
     if [ ! -f "/usr/bin/pyflakes" ];then
@@ -195,13 +210,12 @@ pyflakes(){
     fi
     _PLUGIN="pyflakes"
     echo "INSTALL $_PLUGIN start ..."
-    echo "..."
     if [ ! -d "$_TEMP_DIR/$_PLUGIN" ]; then
         mkdir $_TEMP_DIR/$_PLUGIN
         git clone https://github.com/kevinw/pyflakes-vim.git $_TEMP_DIR/$_PLUGIN 
     fi
     cp -rf $_TEMP_DIR/$_PLUGIN/ftplugin/ $_VIM_HOME 
-    echo "INSTALL $_PLUGIN success ..."
+    echo "$_DEBUG_INSTALL $_PLUGIN $_DEBUG_SUCCESS\n"
 }
 
 cscope(){
@@ -212,19 +226,18 @@ cscope(){
     fi
     _PLUGIN="cscope"
     echo "INSTALL $_PLUGIN start ..."
-    echo "..."
     if [ ! -d "$_TEMP_DIR/$_PLUGIN" ]; then
         mkdir $_TEMP_DIR/$_PLUGIN
         git clone https://github.com/vim-scripts/cscope.vim.git $_TEMP_DIR/$_PLUGIN 
     fi
     cp -rf $_TEMP_DIR/$_PLUGIN/plugin/ $_VIM_HOME 
-    echo "INSTALL $_PLUGIN success ..."
+    echo "$_DEBUG_INSTALL $_PLUGIN $_DEBUG_SUCCESS\n"
 }
 
-main()
+#---- Install plugins ----
+plugins()
 {
      init;
-	 vimrc;
 	 c;
      nerdtree;
      taglist;
@@ -232,7 +245,14 @@ main()
      pyflakes;
      cscope;
     #tabular;
+	echo "Done ..."
 }
-
-main
+echo $*
+if [ "$*" = "vimrc" ];then
+    init
+    vimrc
+else
+    init
+    plugins
+fi
 
