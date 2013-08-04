@@ -101,7 +101,7 @@ pathogen(){
 	else
 	    cd $_PLUGINS_DIR/$_PLUGIN
 		git pull
-		echo "git pull\n"
+		echo "git pull"
 		cd $_CURRENT_PATH
 	fi
 	cp -rf $_PLUGINS_DIR/$_PLUGIN/autoload  $_VIM_HOME
@@ -132,7 +132,7 @@ taglist()
         $_PLUGINS_DIR/$_TAGLIST
     else
 	    git pull
-		echo "git pull\n"
+		echo "git pull"
     fi
 	ln -s $_PLUGINS_DIR/$_TAGLIST $_VIM_BUNDLE/$_TAGLIST
     echo "$_DEBUG_INSTALL $_TAGLIST $_DEBUG_SUCCESS\n"
@@ -148,7 +148,7 @@ tabular()
         git clone https://github.com/godlygeek/tabular.git $_PLUGINS_DIR/$_PLUGIN 
 	else
 	    git pull
-		echo "git pull\n"
+		echo "git pull"
     fi
 	ln -s $_PLUGINS_DIR/$_PLUGIN $_VIM_BUNDLE/$_PLUGIN
     echo "$_DEBUG_INSTALL $_PLUGIN $_DEBUG_SUCCESS\n"
@@ -164,7 +164,7 @@ nerdtree()
         git clone https://github.com/scrooloose/nerdtree.git $_PLUGINS_DIR/$_PLUGIN
 	else
 		git pull
-		echo "git pull\n"
+		echo "git pull"
     fi
 	ln -s $_PLUGINS_DIR/$_PLUGIN $_VIM_BUNDLE/$_PLUGIN
     echo "$_DEBUG_INSTALL $_PLUGIN $_DEBUG_SUCCESS\n"
@@ -181,7 +181,7 @@ a(){
 		$_PLUGINS_DIR/$_PLUGIN
 	else
 		git pull
-		echo "git pull\n"
+		echo "git pull"
 	fi
 	ln -s $_PLUGINS_DIR/$_PLUGIN $_VIM_BUNDLE/$_PLUGIN
     echo "$_DEBUG_INSTALL $_PLUGIN $_DEBUG_SUCCESS\n"
@@ -203,7 +203,7 @@ c()
         git clone https://github.com/vim-scripts/c.vim.git $_PLUGINS_DIR/$_PLUGIN
 	else
 		git pull
-		echo "git pull\n"
+		echo "git pull"
     fi
 	ln -s $_PLUGINS_DIR/$_PLUGIN $_VIM_BUNDLE/$_PLUGIN
     echo "$_DEBUG_INSTALL $_PLUGIN $_DEBUG_SUCCESS\n"
@@ -235,7 +235,7 @@ pyflakes(){
         git clone https://github.com/kevinw/pyflakes-vim.git $_PLUGINS_DIR/$_PLUGIN 
 	else
 		git pull
-		echo "git pull\n"
+		echo "git pull"
     fi
 	ln -s $_PLUGINS_DIR/$_PLUGIN $_VIM_BUNDLE/$_PLUGIN
     echo "$_DEBUG_INSTALL $_PLUGIN $_DEBUG_SUCCESS\n"
@@ -254,7 +254,7 @@ cscope(){
         git clone https://github.com/vim-scripts/cscope.vim.git $_PLUGINS_DIR/$_PLUGIN 
 	else
 		git pull
-		echo "git pull\n"
+		echo "git pull"
     fi
 	ln -s $_PLUGINS_DIR/$_PLUGIN $_VIM_BUNDLE/$_PLUGIN
     echo "$_DEBUG_INSTALL $_PLUGIN $_DEBUG_SUCCESS\n"
