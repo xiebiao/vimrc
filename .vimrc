@@ -77,8 +77,10 @@ set scrolloff=3   "光标移动到buffer的顶部和底部时保持3行距离
 "	File types(文件类型)
 "============================
 "
-"开启pathogen插件
+"开启pathogen插件管理
 execute pathogen#infect()  
+call pathogen#incubate()
+
 filetype on    "侦测文件类型
 filetype plugin on    "载入文件类型插件
 "setlocal omnifunc=javacomplete#Complete 
@@ -96,10 +98,10 @@ autocmd FileType java set omnifunc=javacomplete#Complete
 "	Colors(配色)
 "=======================
 "
-colorscheme murphy 
+"colorscheme murphy 
 "colorscheme my_desert
 "colorscheme desert
-"colorscheme devbox-dark-256 
+colorscheme devbox-dark-256 
 "colorscheme darkblue
 "colorscheme darkburn
 "colorscheme lucius
