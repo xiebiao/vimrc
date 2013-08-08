@@ -28,11 +28,19 @@ _DEBUG_FAILED=" FAILED ..."
 init()
 {
 	echo "#-----------------------------------"
+    if [ ! -f "/usr/bin/vim" ];then
+        echo "$_DEBUG_INSTALL vim ..."
+        sudo apt-get install vim
+        if [ ! $? = 0 ];then
+           echo "$_DEBUG_INSTALL vim $_DEBUG_FAILED"
+           exit;
+        fi
+    fi 
     if [ ! -f "/usr/bin/git" ];then
-        echo $_DEBUG_INSTALL"git ..."
+        echo "$_DEBUG_INSTALL git ..."
         sudo apt-get install git
 		if [ ! $? = 0 ];then
-			echo $_DEBUG_INSTALL"git"$_DEBUG_FAILED
+			echo "$_DEBUG_INSTALL git $_DEBUG_FAILED"
 			exit;
 	    fi
 	    echo $_DEBUG_INSTALL"git"$_DEBUG_SUCCESS
