@@ -47,12 +47,14 @@ init()
     fi
     if [ "$_USER" = "root" ];then
         _VIM_HOME="/root/.vim"
+        _VIMRC="/root/.vimrc"
+        _USER_HOME="/root/"
     else
         _VIM_HOME="/home/"$_USER"/.vim"
-        if [ ! -d "$_VIM_HOME" ];then
-            mkdir $_VIM_HOME
-        fi
         _VIMRC="/home/"$_USER"/.vimrc"
+    fi
+    if [ ! -d "$_VIM_HOME" ];then
+        mkdir $_VIM_HOME
     fi
 
 	echo "_VIMRC=$_VIMRC"
