@@ -19,7 +19,7 @@ set nocompatible   "不兼容vi
 "	Indent(缩进)
 "=======================
 
-"filetype plugin indent on   
+filetype plugin indent on   "vundle配置
 "filetype indent on    "为特定文件类型载入相关缩进文件
 set smartindent   "为C程序提供自动缩进
 "set autoindent    "自动缩进
@@ -73,26 +73,17 @@ set showmatch   "高亮显示匹配的括号
 set matchtime=5   "匹配括号高亮的时间（单位是十分之一秒）
 set scrolloff=3   "光标移动到buffer的顶部和底部时保持3行距离
 "set path +=/usr/include "C语言头文件查找位置
+"
 "============================
 "	File types(文件类型)
 "============================
 "
-"开启pathogen插件管理
-execute pathogen#infect()  
-call pathogen#incubate()
-
-filetype on    "侦测文件类型
+"filetype on    "侦测文件类型
+filetype off "vundle配置
 filetype plugin on    "载入文件类型插件
 "setlocal omnifunc=javacomplete#Complete 
 " python不要 tab 
 autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType java set omnifunc=javacomplete#Complete
 
 "=======================
 "	Colors(配色)
@@ -101,10 +92,10 @@ autocmd FileType java set omnifunc=javacomplete#Complete
 "colorscheme murphy 
 "colorscheme my_desert
 "colorscheme desert
-colorscheme devbox-dark-256 
+"colorscheme devbox-dark-256 
 
 colorscheme molokai
-    set t_Co=256
+set t_Co=256
 
 "colorscheme darkblue
 "colorscheme darkburn
@@ -112,10 +103,11 @@ colorscheme molokai
 "colorscheme freya
 "colorscheme skittles_dark
 "
-
 "=======================
 "	Key map(快捷键映射)
 "=======================
+
+nmap <F1> <nop> "关闭默认F1键弹出帮助
 map <F4> :NERDTree<CR>
 "手动刷新文件内容
 map <F5> :e!<CR>    
@@ -130,6 +122,27 @@ map <C-s> :w<CR>
 imap <C-s> <C-o>:w<CR>
 map <silent><C-s> :update<CR>
 inoremap <C-s> <ESC>:update<CR>a
+
+"=======================
+"	Vundle
+"=======================
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+" My Bundles here:
+"  
+" original repos on github
+Bundle 'scrooloose/nerdtree'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'majutsushi/tagbar'
+" Python
+Bundle 'hdima/python-syntax'
 
 "========================
 "   cscope 
