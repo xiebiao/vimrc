@@ -107,19 +107,23 @@ set t_Co=256
 "	Key map(快捷键映射)
 "=======================
 
-nmap <F1> <nop> "关闭默认F1键弹出帮助
-map <F4> :NERDTree<CR>
-"手动刷新文件内容
-map <F5> :e!<CR>    
+map <F2> :set nonu!<CR> "不显示行号
+map <F3> :set list!<CR> "不显示tab内容
+map <F4> :NERDTree<cr> "打开NERDTree
+map <F5> :e!<cr> " 手动刷新文件
+map <F6> :set nopaste!<CR>
+map <F12> :TlistToggle<cr> "打开taglist
+nmap <S-y> y$<CR> "光标位置复制到行尾
 
-map <F12> :TlistToggle<CR>
-"在正常模式下光标在窗口中移动快捷键
-nmap <S-l> :wincmd w<CR>
+"窗口切换
+nmap <C-j> <C-w><Down>
+nmap <C-k> <C-w><Up>
+nmap <C-l> <C-w><Right>
+nmap <C-h> <C-w><Left>
+
 " 设置 Ctrl + s 保存当前文件
 " 由于Ctrl+S被其他使用，首先要修改~/.bashrc文件，在最后加上
 " stty stop ''
-map <C-s> :w<CR>
-imap <C-s> <C-o>:w<CR>
 map <silent><C-s> :update<CR>
 inoremap <C-s> <ESC>:update<CR>a
 
