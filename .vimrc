@@ -109,7 +109,7 @@ set t_Co=256
 
 map <F2> :set nonu!<CR> "不显示行号
 map <F3> :set list!<CR> "不显示tab内容
-map <F4> :NERDTree<cr> "打开NERDTree
+map <F4> :NERDTreeToggle<cr> "打开NERDTree
 map <F5> :e!<cr> " 手动刷新文件
 map <F6> :set nopaste!<CR>
 map <F12> :TlistToggle<cr> "打开taglist
