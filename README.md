@@ -9,3 +9,6 @@ Vimer
   $ cd vimer  
   $ ./bootstrap.sh
 
+## Vundle安装插件
+
+  命令行执行: PluginInstall
