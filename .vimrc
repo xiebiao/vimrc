@@ -92,9 +92,9 @@ autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
 "colorscheme murphy 
 "colorscheme my_desert
 "colorscheme desert
-"colorscheme devbox-dark-256 
+colorscheme devbox-dark-256 
 
-colorscheme molokai
+"colorscheme molokai
 set t_Co=256
 
 "colorscheme darkblue
@@ -112,7 +112,7 @@ map <F3> :set list!<CR> "不显示tab内容
 map <F4> :NERDTreeToggle<cr> "打开NERDTree
 map <F5> :e!<cr> " 手动刷新文件
 map <F6> :set nopaste!<CR>
-map <F12> :TlistToggle<cr> "打开taglist
+map <F8> :TagbarToggle<CR> "打开taglist
 nmap <S-y> y$<CR> "光标位置复制到行尾
 
 "窗口切换
@@ -153,20 +153,3 @@ Bundle 'hdima/python-syntax'
 "========================
 
 
-
-"=======================
-"   Taglist
-"=======================
-
-"设定系统中ctags程序的位置
-if has("win32")
-	   let Tlist_Ctags_Cmd = 'ctags'
-elseif has("linux") 
-	   let Tlist_Ctags_Cmd = '/usr/bin/ctags'
-endif
-
-"let Tlist_Auto_Open=1                  "默认打开taglist
-let Tlist_Auto_Open=0               
-let Tlist_Show_One_File = 1            "不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口
