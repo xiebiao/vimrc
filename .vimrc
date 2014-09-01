@@ -92,10 +92,12 @@ autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
 "colorscheme murphy 
 "colorscheme my_desert
 "colorscheme desert
-colorscheme devbox-dark-256 
+"colorscheme devbox-dark-256 
 
-"colorscheme molokai
-set t_Co=256
+colorscheme molokai
+let g:rehash256 = 1
+" let g:molokai_original = 1
+" set t_Co=256
 
 "colorscheme darkblue
 "colorscheme darkburn
@@ -145,11 +147,18 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'majutsushi/tagbar'
+" Go
+Bundle 'fatih/vim-go'
 " Python
 Bundle 'hdima/python-syntax'
 
 "========================
-"   cscope 
+"   Cscope 
 "========================
+"
+"========================
+"   Go 
+"========================
+let g:go_disable_autoinstall = 1
 
 

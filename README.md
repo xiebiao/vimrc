@@ -12,3 +12,7 @@ Vimer
 ## Vundle安装插件
 
   命令行执行: PluginInstall
+
+## molokai 配色
+
+  https://github.com/tomasr/molokai
