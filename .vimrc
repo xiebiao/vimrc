@@ -9,7 +9,8 @@ set cursorline                   "光标所在行高亮(vim6.0以上)
 set textwidth=80                 "设置70个字符就自动换行
 set guifont=Monaco\ 12           "设置字体
 set nocompatible       "不要使用vi的键盘模式，而是vim自己的
-set syntax=on    "开启语法高亮
+"set syntax=on    "开启语法高亮(vim7.4貌似不起作用了?)
+syntax on
 set noeb       "去掉输入错误的提示声音
 set confirm    "在处理未保存或只读文件的时候，弹出确认
 set clipboard+=unnamed   "和外界共享粘贴板内容
@@ -160,5 +161,3 @@ Bundle 'hdima/python-syntax'
 "   Go 
 "========================
 let g:go_disable_autoinstall = 1
-
-
