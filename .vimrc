@@ -112,11 +112,10 @@ let g:rehash256 = 1
 
 map <F2> :set nonu!<CR> "不显示行号
 map <F3> :set list!<CR> "不显示tab内容
-map <F4> :NERDTreeToggle<cr> "打开NERDTree
-map <F5> :e!<cr> " 手动刷新文件
+map <F4> :NERDTreeToggle<cr> "Open NERDTree
+map <F5> :e!<cr> " Flush current open file
 map <F6> :set nopaste!<CR>
-map <F8> :TagbarToggle<CR> "打开taglist
-nmap <S-y> y$<CR> "光标位置复制到行尾
+map <F8> :TagbarToggle<CR> "Open taglist
 
 "窗口切换
 nmap <C-j> <C-w><Down>
@@ -127,8 +126,8 @@ nmap <C-h> <C-w><Left>
 " 设置 Ctrl + s 保存当前文件
 " 由于Ctrl+S被其他使用，首先要修改~/.bashrc文件，在最后加上
 " stty stop ''
-map <silent><C-s> :update<CR>
-inoremap <C-s> <ESC>:update<CR>a
+#map <silent><C-s> :update<CR>
+#inoremap <C-s> <ESC>:update<CR>a
 
 "=======================
 "	Vundle
@@ -152,6 +151,12 @@ Bundle 'majutsushi/tagbar'
 Bundle 'fatih/vim-go'
 " Python
 Bundle 'hdima/python-syntax'
+
+"========================
+"   tagbar 
+"========================
+"My mac
+let g:tagbar_ctags_bin='/usr/local/homebrew/bin/ctags'
 
 "========================
 "   Cscope 
