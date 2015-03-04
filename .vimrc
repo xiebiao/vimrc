@@ -97,8 +97,8 @@ autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
 
 colorscheme molokai
 let g:rehash256 = 1
-" let g:molokai_original = 1
-" set t_Co=256
+let g:molokai_original = 1
+set t_Co=256
 
 "colorscheme darkblue
 "colorscheme darkburn
@@ -126,8 +126,8 @@ nmap <C-h> <C-w><Left>
 " 设置 Ctrl + s 保存当前文件
 " 由于Ctrl+S被其他使用，首先要修改~/.bashrc文件，在最后加上
 " stty stop ''
-#map <silent><C-s> :update<CR>
-#inoremap <C-s> <ESC>:update<CR>a
+"#map <silent><C-s> :update<CR>
+"#inoremap <C-s> <ESC>:update<CR>a
 
 "=======================
 "	Vundle
@@ -155,8 +155,12 @@ Bundle 'hdima/python-syntax'
 "========================
 "   tagbar 
 "========================
-"My mac
-let g:tagbar_ctags_bin='/usr/local/homebrew/bin/ctags'
+" For mac
+if has("mac")
+	let g:tagbar_ctags_bin='/usr/local/homebrew/bin/ctags'
+elseif has("linux")
+	let g:tagbar_ctags_bin='/usr/bin/ctags'
+endif
 
 "========================
 "   Cscope 
