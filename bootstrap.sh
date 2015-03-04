@@ -11,7 +11,7 @@
 _CURRENT_PATH=`pwd`
 _PLUGINS_DIR=$_CURRENT_PATH/temp
 _USER=`whoami`
-_USER_HOME="/home/"$_USER"/"
+_USER_HOME=$HOME
 _VIM_HOME=""
 _VIMRC=""
 _VIM_PLUGIN=""
@@ -50,8 +50,8 @@ init()
         _VIMRC="/root/.vimrc"
         _USER_HOME="/root/"
     else
-        _VIM_HOME="/home/"$_USER"/.vim"
-        _VIMRC="/home/"$_USER"/.vimrc"
+        _VIM_HOME="$HOME/.vim"
+        _VIMRC="$HOME/.vimrc"
     fi
     if [ ! -d "$_VIM_HOME" ];then
         mkdir $_VIM_HOME
