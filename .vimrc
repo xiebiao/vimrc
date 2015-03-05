@@ -109,13 +109,17 @@ set t_Co=256
 "=======================
 "	Key map(快捷键映射)
 "=======================
-
-map <F2> :set nonu!<CR> "不显示行号
-map <F3> :set list!<CR> "不显示tab内容
-map <F4> :NERDTreeToggle<cr> "Open NERDTree
-map <F5> :e!<cr> " Flush current open file
+"不显示行号
+map <F2> :set nonu!<CR> 
+"不显示tab内容
+map <F3> :set list!<CR> 
+"Open/Close NERDTree
+map <F4> :NERDTreeToggle<cr> 
+" Flush current open file
+map <F5> :e!<cr> 
 map <F6> :set nopaste!<CR>
-map <F8> :TagbarToggle<CR> "Open taglist
+"Open taglist
+map <F8> :TagbarToggle<CR> 
 
 "窗口切换
 nmap <C-j> <C-w><Down>
