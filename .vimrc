@@ -123,10 +123,10 @@ map <F6> :set nopaste!<CR>
 map <F8> :TagbarToggle<CR> 
 
 "窗口切换
-nmap <C-j> <C-w><Down>
-nmap <C-k> <C-w><Up>
-nmap <C-l> <C-w><Right>
-nmap <C-h> <C-w><Left>
+nmap <s-j> <C-w><Down>
+nmap <s-k> <C-w><Up>
+nmap <s-l> <C-w><Right>
+nmap <s-h> <C-w><Left>
 
 " 设置 Ctrl + s 保存当前文件
 " 由于Ctrl+S被其他使用，首先要修改~/.bashrc文件，在最后加上
