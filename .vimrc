@@ -109,6 +109,8 @@ set t_Co=256
 "=======================
 "	Key map(快捷键映射)
 "=======================
+"同时按jk键进入Normal模式
+inoremap jk <ESC>
 "不显示行号
 map <F2> :set nonu!<CR> 
 "不显示tab内容
