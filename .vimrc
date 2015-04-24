@@ -68,7 +68,7 @@ set report=0   "通过使用: commands命令，告诉我们文件的哪一行被
 "set shortmess=atI   "启动的时候不显示那个援助索马里儿童的提示(我们应该显示)
 set fillchars=vert:\ ,stl:\ ,stlnc:\   "在被分割的窗口间显示空白，便于阅读
 set showmatch   "高亮显示匹配的括号
-set matchtime=5   "匹配括号高亮的时间（单位是十分之一秒）
+set matchtime=1   "匹配括号高亮的时间（单位是十分之一秒）
 set scrolloff=3   "光标移动到buffer的顶部和底部时保持3行距离
 "set path +=/usr/include "C语言头文件查找位置
 "
@@ -108,6 +108,7 @@ set t_Co=256
 "=======================
 "	Key map(快捷键映射)
 "=======================
+let mapleader = ","
 "同时按jk键进入Normal模式
 inoremap jk <ESC>
 "不显示行号
@@ -123,10 +124,11 @@ map <F6> :set nopaste!<CR>
 map <F8> :TagbarToggle<CR> 
 
 "窗口切换
-nmap <s-j> <C-w><Down>
-nmap <s-k> <C-w><Up>
-nmap <s-l> <C-w><Right>
-nmap <s-h> <C-w><Left>
+"由于<Shift-j>与合并行<J>冲突，所以不能使用Shift键组合
+nmap <C-j> <C-w><Down>
+nmap <C-k> <C-w><Up>
+nmap <C-l> <C-w><Right>
+nmap <C-h> <C-w><Left>
 
 " 设置 Ctrl + s 保存当前文件
 " 由于Ctrl+S被其他使用，首先要修改~/.bashrc文件，在最后加上
