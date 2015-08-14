@@ -75,8 +75,6 @@ set scrolloff=3   "光标移动到buffer的顶部和底部时保持3行距离
 "	File types(文件类型)
 "============================
 "
-"filetype on    "侦测文件类型
-filetype plugin indent on   "vundle配置
 "filetype indent on    "为特定文件类型载入相关缩进文件
 filetype off "vundle配置
 filetype plugin on    "载入文件类型插件
@@ -136,28 +134,37 @@ nmap <C-h> <C-w><Left>
 "#inoremap <C-s> <ESC>:update<CR>a
 
 "=======================
+"   pathogen	
+"=======================
+
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+"=======================
 "	Vundle
 "=======================
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 " My Bundles here:
 "  
 " original repos on github
-Bundle 'scrooloose/nerdtree'
-Bundle 'fholgado/minibufexpl.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'majutsushi/tagbar'
 " Go
-Bundle 'fatih/vim-go'
+Plugin 'fatih/vim-go'
 " Python
-Bundle 'hdima/python-syntax'
-
+Plugin 'hdima/python-syntax'
+cal vundle#end()
+filetype plugin indent on   "vundle配置
 "========================
 "   Tagbar 
 "========================

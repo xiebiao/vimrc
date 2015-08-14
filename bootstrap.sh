@@ -25,9 +25,8 @@ _DEBUG_INSTALL="INSTALL "
 _DEBUG_SUCCESS=" SUCCESS ..."
 _DEBUG_FAILED=" FAILED ..."
 
-init()
-{
-	echo "#-----------------------------------"
+init(){
+    echo "#-----------------------------------"
     if [ ! -f "/usr/bin/vim" ];then
         echo "$_DEBUG_INSTALL vim ..."
         sudo apt-get install vim
@@ -98,9 +97,20 @@ vundle(){
 	fi
 
 }
+pathogen(){
+
+	_PLUGIN="pathogen"
+    _PLUGIN_LOCAL=$_VIM_HOME/autoload/
+
+    if [ ! -d "$_PLUGIN_LOCAL" ]; then
+	    echo "mkdir $_PLUGIN_LOCAL"
+	    mkdir -p $_PLUGIN_LOCAL 
+    fi
+	    cd $_PLUGIN_LOCAL
+            curl -O https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+}
 #----  taglist.vim
-taglist()
-{
+taglist(){
     if [ ! -f "/usr/bin/ctags" ];then
         echo $_DEBUG_INSTALL" ctags ..."
         sudo apt-get install ctags
@@ -130,3 +140,4 @@ taglist()
 init
 vimrc
 vundle
+pathogen
