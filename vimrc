@@ -153,6 +153,7 @@ Plugin 'gmarik/vundle'
 " My Bundles here:
 "  
 " original repos on github
+Plugin 'vim-airline/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'Lokaltog/vim-powerline'
@@ -163,6 +164,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'fatih/vim-go'
 " Python
 Plugin 'hdima/python-syntax'
+" Clojure
+Plugin 'venantius/vim-cljfmt'
 cal vundle#end()
 filetype plugin indent on   "vundle配置
 "========================
