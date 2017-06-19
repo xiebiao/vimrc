@@ -7,7 +7,7 @@ Vimer
 
   $ git clone https://github.com/xiebiao/vimer  
   $ cd vimer  
-  $ ./bootstrap.sh
+  $ ./install.sh
 
 ## 通过Vundle安装插件
 
