@@ -153,10 +153,10 @@ Plugin 'gmarik/vundle'
 " My Bundles here:
 "  
 " original repos on github
-"Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline'
+"Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
