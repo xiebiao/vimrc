@@ -16,8 +16,12 @@ Vimer
 ## 默认配色
 
   https://github.com/tomasr/molokai
-  
+
+## VIM使用入门
+
+  https://github.com/gitig/Practical-Vim-Notes
+
 ## 如何写VIM插件
 
-http://learnvimscriptthehardway.stevelosh.com/
+  http://learnvimscriptthehardway.stevelosh.com/
 
