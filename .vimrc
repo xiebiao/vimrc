@@ -108,16 +108,17 @@ set t_Co=256
 let mapleader = ","
 "同时按jk键进入Normal模式
 inoremap jk <ESC>
+"大部分系统使用<F1>作为系统帮助键，所以不要单独设置
 "不显示行号
 map <F2> :set nonu!<CR> 
 "不显示tab内容
 map <F3> :set list!<CR> 
 "Open/Close NERDTree
 map <F4> :NERDTreeToggle<cr> 
-" Flush current open file
+"Flush current open file
 map <F5> :e!<cr> 
 map <F6> :set nopaste!<CR>
-"Open taglist
+"Open Tagbar
 map <F8> :TagbarToggle<CR> 
 
 "窗口切换
@@ -152,20 +153,21 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 " My Bundles here:
 "  
-" original repos on github
+" Original repos on github
+Plugin 'vim-airline/vim-airline'
+"Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'majutsushi/tagbar'
-" Clojure
-Plugin 'vim-scripts/VimClojure'
-Plugin 'tpope/vim-fireplace'
 " Go
 Plugin 'fatih/vim-go'
 " Python
 Plugin 'hdima/python-syntax'
+" Clojure
+Plugin 'venantius/vim-cljfmt'
+Plugin 'vim-scripts/VimClojure'
 cal vundle#end()
 filetype plugin indent on   "vundle配置
 "========================

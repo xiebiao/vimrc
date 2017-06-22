@@ -73,9 +73,9 @@ vimrc(){
 	_VIMRC=".vimrc"
 	_SHELL_PATH=`pwd`
 	echo $_SHELL_PATH
-	cp $_SHELL_PATH/$_VIMRC $_USER_HOME/$_VIMRC
+	cp -rf $_SHELL_PATH/$_VIMRC $_USER_HOME/$_VIMRC
 	echo "Copy $_SHELL_PATH/$_VIMRC to "$_USER_HOME/$_VIMRC" ..."
-	cp $_SHELL_PATH/colors/* $_VIM_COLORS 
+	cp -rf $_SHELL_PATH/colors/* $_VIM_COLORS 
 	echo "Done ...\n"
 }
 
