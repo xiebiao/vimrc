@@ -1,7 +1,8 @@
 Vimer
 ===========
 
-  
+[官方文档](http://vimdoc.sourceforge.net/htmldoc/usr_toc.html)
+
 ## 安装
 
   $ git clone https://github.com/xiebiao/vimer  
