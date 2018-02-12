@@ -127,6 +127,7 @@ nmap <C-j> <C-w><Down>
 nmap <C-k> <C-w><Up>
 nmap <C-l> <C-w><Right>
 nmap <C-h> <C-w><Left>
+nmap <C-c> <C-W><v>
 
 " 设置 Ctrl + s 保存当前文件
 " 由于Ctrl+S被其他使用，首先要修改~/.bashrc文件，在最后加上
@@ -155,6 +156,7 @@ Plugin 'gmarik/vundle'
 "  
 " Original repos on github
 Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-surround'
 "Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
