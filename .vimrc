@@ -155,6 +155,7 @@ Plugin 'gmarik/vundle'
 " My Bundles here:
 "  
 " Original repos on github
+Plugin 'Yggdroot/LeaderF'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-surround'
 "Plugin 'Lokaltog/vim-powerline'
