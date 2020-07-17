@@ -155,6 +155,8 @@ Plugin 'gmarik/vundle'
 " My Bundles here:
 "  
 " Original repos on github
+" Color
+Plugin 'joshdick/onedark.vim'
 Plugin 'Yggdroot/LeaderF'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-surround'
