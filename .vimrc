@@ -93,12 +93,7 @@ autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
 
 colorscheme molokai
 let g:rehash256 = 1
-let g:molokai_original = 1
-set t_Co=256
-
-"colorscheme darkblue
-"colorscheme darkburn
-"colorscheme lucius
+let g:molokai_original = 1 set t_Co=256 "colorscheme darkblue "colorscheme darkburn "colorscheme lucius
 "colorscheme freya
 "colorscheme skittles_dark
 "
@@ -155,6 +150,8 @@ Plugin 'gmarik/vundle'
 " My Bundles here:
 "  
 " Original repos on github
+" Color
+Plugin 'joshdick/onedark.vim'
 Plugin 'Yggdroot/LeaderF'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-surround'
