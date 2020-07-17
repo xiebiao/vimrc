@@ -157,7 +157,6 @@ Plugin 'gmarik/vundle'
 " Original repos on github
 " Color
 Plugin 'joshdick/onedark.vim'
-Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'Yggdroot/LeaderF'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-surround'
