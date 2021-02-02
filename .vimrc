@@ -131,7 +131,7 @@ nmap <C-c> <C-W><v>
 "#inoremap <C-s> <ESC>:update<CR>a
 
 "=======================
-"   pathogen	
+"   pathogen(https://github.com/tpope/vim-pathogen)
 "=======================
 
 execute pathogen#infect()
@@ -139,7 +139,7 @@ syntax on
 filetype plugin indent on
 
 "=======================
-"	Vundle
+"	Vundle(https://github.com/VundleVim/Vundle.vim)
 "=======================
 
 set rtp+=~/.vim/bundle/vundle/
