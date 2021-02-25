@@ -130,16 +130,12 @@ nmap <C-c> <C-W><v>
 "#map <silent><C-s> :update<CR>
 "#inoremap <C-s> <ESC>:update<CR>a
 
-"=======================
-"   pathogen(https://github.com/tpope/vim-pathogen)
-"=======================
-
-execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
 "=======================
 "	Vundle(https://github.com/VundleVim/Vundle.vim)
+"	先将Vundle.vim保存到~/.vim/bundle目录
 "=======================
 
 set rtp+=~/.vim/bundle/vundle/
