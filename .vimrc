@@ -172,7 +172,7 @@ filetype plugin indent on   "vundle配置
 "========================
 " For mac
 if has("mac")
-	let g:tagbar_ctags_bin='/usr/local/homebrew/bin/ctags'
+	let g:tagbar_ctags_bin='/usr/bin/ctags'
 elseif has("linux")
 	let g:tagbar_ctags_bin='/usr/bin/ctags'
 endif
