@@ -112,6 +112,7 @@ map <F3> :set list!<CR>
 map <F4> :NERDTreeToggle<cr> 
 "Flush current open file
 map <F5> :e!<cr> 
+"退出粘贴模式
 map <F6> :set nopaste!<CR>
 "Open Tagbar
 map <F8> :TagbarToggle<CR> 
