@@ -156,7 +156,19 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'scrooloose/nerdcommenter'
+
+"配合Ctags(http://ctags.sourceforge.net/)使用
 Plugin 'majutsushi/tagbar'
+
+"Clojure/Lisp Code代码效率工具
+Plugin 'bhurlow/vim-parinfer'
+let g:vim_parinfer_filetypes=['lisp','clj']
+
+"代码异步检测
+Plugin 'w0rp/ale'
+let g:ale_linters={'clojure':['clj-kondo']} "配合代码检测: https://github.com/clj-kondo/clj-kondo
+
+
 " Go
 Plugin 'fatih/vim-go'
 " Python
@@ -168,11 +180,12 @@ Plugin 'tpope/vim-fireplace'
 cal vundle#end()
 filetype plugin indent on   "vundle配置
 "========================
-"   Tagbar 
+"   Tagbar(Ctags)
 "========================
 " For mac
 if has("mac")
 	let g:tagbar_ctags_bin='/usr/bin/ctags'
+	let g:Tlist_Ctags_Cmd='/usr/bin/ctags'
 elseif has("linux")
 	let g:tagbar_ctags_bin='/usr/bin/ctags'
 endif
