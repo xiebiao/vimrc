@@ -161,7 +161,8 @@ Plugin 'scrooloose/nerdcommenter'
 "配合Ctags(http://ctags.sourceforge.net/)使用
 Plugin 'majutsushi/tagbar'
 "显示列缩进线
-Plugin 'nathanaelkane/vim-indent-guides' 
+Plugin 'Yggdroot/indentLine'
+
 "Clojure/Lisp Code代码效率工具
 Plugin 'bhurlow/vim-parinfer'
 let g:vim_parinfer_filetypes=['lisp','clj']
