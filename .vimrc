@@ -160,7 +160,8 @@ Plugin 'scrooloose/nerdcommenter'
 
 "配合Ctags(http://ctags.sourceforge.net/)使用
 Plugin 'majutsushi/tagbar'
-
+"显示列缩进线
+Plugin 'nathanaelkane/vim-indent-guides' 
 "Clojure/Lisp Code代码效率工具
 Plugin 'bhurlow/vim-parinfer'
 let g:vim_parinfer_filetypes=['lisp','clj']
@@ -168,7 +169,6 @@ let g:vim_parinfer_filetypes=['lisp','clj']
 "代码异步检测
 Plugin 'w0rp/ale'
 let g:ale_linters={'clojure':['clj-kondo']} "配合代码检测: https://github.com/clj-kondo/clj-kondo
-
 
 " Go
 Plugin 'fatih/vim-go'
