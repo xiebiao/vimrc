@@ -5,8 +5,8 @@ Vimer
 
 ## 安装
 
-  $ git clone https://github.com/xiebiao/vimer  
-  $ cd vimer  
+  $ git clone https://github.com/xiebiao/vimrc
+  $ cd vimrc
   $ ./install.sh
 
 ## 通过Vundle安装插件
@@ -21,6 +21,11 @@ Vimer
 ## VIM使用入门
 
   https://github.com/gitig/Practical-Vim-Notes
+
+
+## 快捷键指南
+
+  http://michael.peopleofhonoronly.com/vim/
 
 ## 如何写VIM插件
 
