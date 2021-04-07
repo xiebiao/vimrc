@@ -18,9 +18,9 @@ Vimer
 
   https://github.com/tomasr/molokai
 
-## VIM使用入门
+## VIM教程
 
-  https://github.com/gitig/Practical-Vim-Notes
+- https://github.com/gitig/Practical-Vim-Notes
 
 
 ## 快捷键指南
