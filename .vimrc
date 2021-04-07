@@ -103,6 +103,10 @@ let g:molokai_original = 1 set t_Co=256 "colorscheme darkblue "colorscheme darkb
 let mapleader = ","
 "同时按jk键进入Normal模式
 inoremap jk <ESC>
+"向上/向下移动行
+nnoremap <S-Up>  :<c-u>execute 'move -1-'. v:count1<cr>
+nnoremap <S-Down>  :<c-u>execute 'move +'. v:count1<cr>
+
 "大部分系统使用<F1>作为系统帮助键，所以不要单独设置
 "不显示行号
 map <F2> :set nonu!<CR> 
