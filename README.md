@@ -5,9 +5,11 @@ Vimer
 
 ## 安装
 
+```
   $ git clone https://github.com/xiebiao/vimrc
   $ cd vimrc
   $ ./install.sh
+```
 
 ## 通过Vundle安装插件
 
@@ -20,7 +22,7 @@ Vimer
 
 ## VIM教程
 
-- https://github.com/gitig/Practical-Vim-Notes
+- https://github.com/wsdjeg/vim-galore-zh_cn
 
 
 ## 快捷键指南
