@@ -16,9 +16,10 @@ Vimer
   使用 [vundle](https://github.com/gmarik/vundle) 管理插件 
   插件安装: PluginInstall
 
-## 默认配色
+## 配色
 
-  https://github.com/tomasr/molokai
+- [配色](https://vimcolors.com/)
+- [默认配色](https://github.com/tomasr/molokai)
 
 ## VIM教程
 
