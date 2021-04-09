@@ -83,20 +83,11 @@ filetype plugin on    "载入文件类型插件
 autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
 
 "=======================
-"	Colors(配色)
+" Default color
 "=======================
 "
-"colorscheme murphy 
-"colorscheme my_desert
-"colorscheme desert
-"colorscheme devbox-dark-256 
+colorscheme xcodewwdc
 
-colorscheme molokai
-let g:rehash256 = 1
-let g:molokai_original = 1 set t_Co=256 "colorscheme darkblue "colorscheme darkburn "colorscheme lucius
-"colorscheme freya
-"colorscheme skittles_dark
-"
 "=======================
 "	Key map(快捷键映射)
 "=======================
@@ -155,12 +146,16 @@ Plugin 'gmarik/vundle'
 " My Bundles here:
 "  
 " Original repos on github
-" Color
-Plugin 'joshdick/onedark.vim'
+" Colors
+Plugin 'arzg/vim-colors-xcode'
+
+"Search tools
 Plugin 'Yggdroot/LeaderF'
+"Status line
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 Plugin 'tpope/vim-surround'
-"Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'kien/rainbow_parentheses.vim'
