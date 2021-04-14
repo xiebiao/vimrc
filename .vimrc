@@ -179,8 +179,6 @@ Plugin 'fatih/vim-go'
 " Python
 Plugin 'hdima/python-syntax'
 " Clojure
-Plugin 'venantius/vim-cljfmt'
-Plugin 'vim-scripts/VimClojure'
 Plugin 'tpope/vim-fireplace'
 cal vundle#end()
 filetype plugin indent on   "vundle配置
