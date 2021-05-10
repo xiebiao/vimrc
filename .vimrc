@@ -183,8 +183,9 @@ let g:vim_parinfer_filetypes=['lisp','clj']
 "代码异步检测
 Plugin 'w0rp/ale'
 let g:ale_linters={'clojure':['clj-kondo']} "配合代码检测: https://github.com/clj-kondo/clj-kondo
-" Rust
+" Rust 代码提示(已经停止更新,推荐使用vim-lsp,vim-lsp-settings)
 Plugin 'racer-rust/vim-racer' 
+" Rust 语法提示
 Plugin 'rust-lang/rust.vim'
 " Go
 Plugin 'fatih/vim-go'
