@@ -91,7 +91,7 @@ colorscheme xcodewwdc
 "=======================
 "	Key map(快捷键映射)
 "=======================
-let mapleader = ","
+let mapleader = "\"
 "同时按jk键进入Normal模式
 inoremap jk <ESC>
 "normal,visual模式下向上/向下移动行
@@ -156,9 +156,11 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'tpope/vim-surround'
+"File explore
 Plugin 'scrooloose/nerdtree'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'kien/rainbow_parentheses.vim'
+
+"Comment and uncomment code
+"https://github.com/preservim/nerdcommenter#usage
 Plugin 'scrooloose/nerdcommenter'
 
 "配合Ctags(http://ctags.sourceforge.net/)使用
@@ -173,7 +175,7 @@ let g:vim_parinfer_filetypes=['lisp','clj']
 "代码异步检测
 Plugin 'w0rp/ale'
 let g:ale_linters={'clojure':['clj-kondo']} "配合代码检测: https://github.com/clj-kondo/clj-kondo
-"Rust
+" Rust
 Plugin 'racer-rust/vim-racer' 
 Plugin 'rust-lang/rust.vim'
 " Go
