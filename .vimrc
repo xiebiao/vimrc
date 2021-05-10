@@ -91,7 +91,7 @@ colorscheme xcodewwdc
 "=======================
 "	Key map(快捷键映射)
 "=======================
-let mapleader = "\"
+let mapleader = "\\" "设置leader键
 "同时按jk键进入Normal模式
 inoremap jk <ESC>
 "normal,visual模式下向上/向下移动行
