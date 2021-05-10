@@ -165,6 +165,14 @@ Plugin 'scrooloose/nerdcommenter'
 
 "配合Ctags(http://ctags.sourceforge.net/)使用
 Plugin 'majutsushi/tagbar'
+" For mac
+if has("mac")
+	let g:tagbar_ctags_bin='/usr/bin/ctags'
+	let g:Tlist_Ctags_Cmd='/usr/bin/ctags'
+elseif has("linux")
+	let g:tagbar_ctags_bin='/usr/bin/ctags'
+endif
+
 "显示列缩进线
 Plugin 'Yggdroot/indentLine'
 
@@ -180,28 +188,11 @@ Plugin 'racer-rust/vim-racer'
 Plugin 'rust-lang/rust.vim'
 " Go
 Plugin 'fatih/vim-go'
+let g:go_disable_autoinstall = 1
+
 " Python
 Plugin 'hdima/python-syntax'
 " Clojure
 Plugin 'tpope/vim-fireplace'
 cal vundle#end()
 filetype plugin indent on   "vundle配置
-"========================
-"   Tagbar(Ctags)
-"========================
-" For mac
-if has("mac")
-	let g:tagbar_ctags_bin='/usr/bin/ctags'
-	let g:Tlist_Ctags_Cmd='/usr/bin/ctags'
-elseif has("linux")
-	let g:tagbar_ctags_bin='/usr/bin/ctags'
-endif
-
-"========================
-"   Cscope 
-"========================
-"
-"========================
-"   Go(Bundle 'fatih/vim-go')
-"========================
-let g:go_disable_autoinstall = 1
