@@ -130,6 +130,12 @@ nmap <C-c> <C-W><v>
 "#map <silent><C-s> :update<CR>
 "#inoremap <C-s> <ESC>:update<CR>a
 
+"代码补全
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+"代码补全END
+
 syntax on
 filetype plugin indent on
 
@@ -180,12 +186,11 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'bhurlow/vim-parinfer'
 let g:vim_parinfer_filetypes=['lisp','clj']
 
-"代码异步检测
+"代码异步检测，支持Clojure
 Plugin 'w0rp/ale'
 let g:ale_linters={'clojure':['clj-kondo']} "配合代码检测: https://github.com/clj-kondo/clj-kondo
-" Rust 代码提示(已经停止更新,推荐使用vim-lsp,vim-lsp-settings)
-Plugin 'racer-rust/vim-racer' 
-" Rust 语法提示
+
+" Rust 
 Plugin 'rust-lang/rust.vim'
 " Go
 Plugin 'fatih/vim-go'
@@ -195,5 +200,21 @@ let g:go_disable_autoinstall = 1
 Plugin 'hdima/python-syntax'
 " Clojure
 Plugin 'tpope/vim-fireplace'
+
+"代码补全
+Plugin 'prabirshrestha/async.vim'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+"Rust LSP注册
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+        \ 'whitelist': ['rust'],
+        \ })
+endif
+"代码补全END
+
 cal vundle#end()
 filetype plugin indent on   "vundle配置
