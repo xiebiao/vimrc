@@ -187,9 +187,10 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'bhurlow/vim-parinfer'
 let g:vim_parinfer_filetypes=['lisp','clj']
 
-"代码异步检测，支持Clojure
+"语法检测，支持Clojure
 Plugin 'w0rp/ale'
 let g:ale_linters={'clojure':['clj-kondo']} "配合代码检测: https://github.com/clj-kondo/clj-kondo
+Plugin 'rhysd/vim-lsp-ale' "解决ale与vim-lsp冲突问题
 
 " Rust 
 Plugin 'rust-lang/rust.vim'
