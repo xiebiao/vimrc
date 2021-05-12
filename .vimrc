@@ -14,7 +14,7 @@ syntax on
 set noeb       "去掉输入错误的提示声音
 set confirm    "在处理未保存或只读文件的时候，弹出确认
 set clipboard+=unnamed   "和外界共享粘贴板内容
-
+set hidden " 允许在有未保存的修改时切换缓冲区，此时的修改由 vim 负责保存
 "=======================
 "	Indent(缩进)
 "=======================
