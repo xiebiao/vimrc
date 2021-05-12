@@ -161,6 +161,7 @@ Plugin 'Yggdroot/LeaderF'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+"配对符号修改
 Plugin 'tpope/vim-surround'
 "File explore
 Plugin 'scrooloose/nerdtree'
@@ -205,6 +206,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'prabirshrestha/async.vim'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/vim-lsp'
+Plugin 'mattn/vim-lsp-settings'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 "Rust LSP注册
 if executable('rls')
