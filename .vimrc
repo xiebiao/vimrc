@@ -94,9 +94,7 @@ colorscheme xcodewwdc
 let mapleader = "\\" "设置leader键
 "同时按jk键进入Normal模式
 inoremap jk <ESC>
-"normal,visual模式下向上/向下移动行
-"nnoremap <S-Up>  :<c-u>execute 'move -1-'. v:count1<cr>
-"nnoremap <S-Down>  :<c-u>execute 'move +'. v:count1<cr>
+"normal,visual模式向上/向下移动内容
 nmap <S-Down> mz:m+<cr>`z
 nmap <S-Up> mz:m-2<cr>`z
 vmap <S-Down> :m'>+<cr>`<my`>mzgv`yo`z
