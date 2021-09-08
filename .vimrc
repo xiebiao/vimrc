@@ -152,6 +152,7 @@ Plugin 'gmarik/vundle'
 " Original repos on github
 " Colors
 Plugin 'arzg/vim-colors-xcode'
+Plugin 'navarasu/onedark.nvim'
 
 "Search tools
 Plugin 'Yggdroot/LeaderF'
