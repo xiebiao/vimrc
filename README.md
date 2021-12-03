@@ -3,29 +3,16 @@ Vimer
 
 [官方文档](http://vimdoc.sourceforge.net/htmldoc/usr_toc.html)
 
-## 安装
-
-```
-  $ git clone https://github.com/xiebiao/vimrc
-  $ cd vimrc
-  $ ./install.sh
-```
-
-## 通过Vundle安装插件
-
-  使用 [vundle](https://github.com/gmarik/vundle) 管理插件 
-  插件安装: PluginInstall
 
 ## 推荐配色
 
-- https://github.com/navarasu/onedark.nvim
+- [onedark](https://github.com/navarasu/onedark.nvim)(NeoVim)
 - [配色](https://vimcolors.com/)
 - [默认配色](https://github.com/tomasr/molokai)
 
 ## VIM教程
 
 - https://github.com/wsdjeg/vim-galore-zh_cn
-
 
 ## 快捷键指南
 
