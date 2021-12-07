@@ -138,8 +138,7 @@ syntax on
 filetype plugin indent on
 
 "=======================
-"	Vundle(https://github.com/VundleVim/Vundle.vim)
-"	先将Vundle.vim保存到~/.vim/bundle目录
+" 插件管理:	https://github.com/junegunn/vim-plug
 "=======================
 "插件默认安装在plugged目录中
 call plug#begin()
