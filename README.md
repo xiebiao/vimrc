@@ -22,3 +22,12 @@ Vimer
 
   http://learnvimscriptthehardway.stevelosh.com/
 
+## 编程语言插件
+
+### 常用插件
+
+- [vim-surround](https://github.com/tpope/vim-surround)
+  
+### Clojure
+
+- [conjure](https://github.com/Olical/conjure)
