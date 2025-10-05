@@ -4,6 +4,7 @@
 if has('mouse') 
     set mouse=a       "可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
 endif 
+set modifiable                   "允许设置在运行时被修改
 set cursorcolumn                 "光标所在列高亮(vim6.0以上)
 set cursorline                   "光标所在行高亮(vim6.0以上)
 set textwidth=80                 "设置70个字符就自动换行
@@ -41,10 +42,10 @@ set ignorecase     "搜索忽略大小写
 "set hlsearch   "搜索逐字符高亮
 set incsearch
 set gdefault   "行内替换
-set ff=unix "设置fileformat为unix，windows下ff=dos
+"set ff=unix "设置fileformat为unix，windows下ff=dos
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
-set langmenu=zh_CN.UTF-8   "语言设置
-set helplang=cn
+"set langmenu=zh_CN.UTF-8   "语言设置
+"set helplang=cn
 set fileencodings=utf-8,gbk,ucs-bom,cp936,unicode,latin-1   "设置文件编码列表
 set enc=utf-8   "编码设置
 set fileencoding=utf-8
