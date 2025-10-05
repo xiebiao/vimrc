@@ -106,14 +106,10 @@ vmap <S-Up> :m'<-2<cr>`>my`<mzgv`yo`z
 map <F2> :set nonu!<CR> 
 "不显示tab内容
 map <F3> :set list!<CR> 
-"Open/Close NERDTree
-map <F4> :NERDTreeToggle<cr> 
 "Flush current open file
 map <F5> :e!<cr> 
 "退出粘贴模式
 map <F6> :set nopaste!<CR>
-"Open Tagbar
-map <F8> :TagbarToggle<CR> 
 
 "窗口切换
 "由于<Shift-j>与合并行<J>冲突，所以不能使用Shift键组合
@@ -124,9 +120,9 @@ nmap <C-h> <C-w><Left>
 nmap <C-c> <C-W><v>
 
 " 设置 Ctrl + s 保存当前文件
-" 由于Ctrl+S被其他使用，首先要修改~/.bashrc文件，在最后加上
+" 由于Ctrl+s被其他使用，首先要修改~/.bashrc文件，在最后加上
 " stty stop ''
-"#map <silent><C-s> :update<CR>
+map <silent><C-s> :update<CR>
 "#inoremap <C-s> <ESC>:update<CR>a
 
 "代码补全
