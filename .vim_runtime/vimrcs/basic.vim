@@ -7,7 +7,7 @@ endif
 set cursorcolumn                 "光标所在列高亮(vim6.0以上)
 set cursorline                   "光标所在行高亮(vim6.0以上)
 set textwidth=80                 "设置70个字符就自动换行
-set guifont=JetBrains\ Mono           "设置字体
+set guifont=Monaco\ 12           "设置字体
 set nocompatible       "不要使用vi的键盘模式，而是vim自己的
 "set syntax=on    "开启语法高亮(vim7.4貌似不起作用了?)
 syntax on
@@ -86,7 +86,7 @@ autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
 " Default color
 "=======================
 "
-"colorscheme monokai
+colorscheme xcodewwdc
 
 "=======================
 "	Key map(快捷键映射)
@@ -137,24 +137,3 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 syntax on
 filetype plugin indent on
 
-"=======================
-" 插件管理:	https://github.com/junegunn/vim-plug
-"=======================
-"插件默认安装在plugged目录中
-call plug#begin()
-Plug 'navarasu/onedark.nvim'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'rust-lang/rust.vim'
-Plug 'majutsushi/tagbar'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-"显示列缩进线
-Plug 'Yggdroot/indentLine'
-
-cal plug#end()
-set tags=%HOME%\scoop\apps\ctags\current\ctags.exe
-filetype plugin indent on   "vundle配置
-"需要插件加载后才能执行配色切换
-let g:onedark_style = 'warmer'
-colorscheme onedark
