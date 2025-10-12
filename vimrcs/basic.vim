@@ -87,7 +87,9 @@ autocmd FileType python setlocal et | setlocal sta | setlocal sw=4
 " Default color
 "=======================
 "
-colorscheme xcodewwdc
+"colorscheme xcodewwdc
+colorscheme gruvbox
+set background=dark
 
 "=======================
 "	Key map(快捷键映射)
